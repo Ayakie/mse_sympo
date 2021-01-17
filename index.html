@@ -3,35 +3,164 @@
     <head>
         <meta charset="utf-8">
         <title>Service engineering symposium</title>
-        <link rel="stylesheet" href="css/semantic.min.css">
-        <link rel="stylesheet" href="css/style_top.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
         <script src="js/semantic.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/semantic.min.css">
+        <link rel="stylesheet" href="css/style_top.css">
     </head>
 
     <body>
-        <div class="header">
-        </div>
 
+        <!-- Page Contents -->
         <div class="main">
 
-            <div class="visual">
+            <div class="top-visual">
+                <div class="ui fixed inverted compact labeled icon menu">
+                    <div class="ui container">
+                        <a href="#" class="item" style="padding-top: 27px;">社会工学データサイエンスシンポジウム</a>
+                        <div class="right menu">
+                            <a href="#" class="purple item"><i class="inverted home icon"></i>Home</a>
+                            <a href="#" class="purple item"><i class="inverted file alternate icon"></i>Documents</a>
+                            <a href="#" class="purple item"><i class="inverted envelope icon"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="about">
-            </div>
+            <!-- about -->
+            <section class="about">
+                <div class="ui container">
+                    <h2>About</h2>
+                    <div class="ui three column grid">
+                        <div class="row">
+                            <div class="column">
+                                <img src="img/remo.png" alt="">
+                            </div>
+                            <div class="column">
+                                <img src="img/ubie_abe.jpg" alt="">
+                            </div>
+                            <div class="column">
+                                <img src="img/dummy.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <p>サービス工学学位プログラム学生による研究成果発表</p>
+                            </div>
+                            <div class="column">
+                                <p>豪華ゲストによる基調講演</p>
+                            </div>
+                            <div class="column">
+                                <p>データサイエンス・ケースバンクデモンストレーション</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="schedule">
-            </div>
+            <!-- schedule -->
+            <section class="schedule">
+                <div  class="ui container">
+                    <h2>Schedule</h2>
+                    <table class="ui single line striped table">
+                        <tbody>
+                            <tr>
+                                <td rowspan="3" class="center aligned"><p>第一部</p><p>13:00 ~ 14:15</p></td>
+                                <td>開式の辞</td>
+                                <td>藤川 昌樹</td>
+                                <td>筑波大学 社会工学域</td>
+                            </tr>
+                            <tr>
+                                <td>来賓祝辞</td>
+                                <td>浅野 大介様</td>
+                                <td>経済産業省 サービス政策課長 教育産業室長</td>
+                            </tr>
+                            <tr>
+                                <td>基調講演</td>
+                                <td>阿部 吉倫様</td>
+                                <td>Ubie株式会社 共同代表取締役医師</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class="center aligned"><p>第二部</p><p>14:30 ~ 15:30</p></td>
+                                <td>ディスカッセント</td>
+                                <td>船木 謙一様</td>
+                                <td>日立製作所 コーポレートベンチャリング室</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">コンセプト紹介・デモ</td>
+                                <td>鈴木 勉<p>大山 智也</p></td>
+                                <td>筑波大学 理工学群 社会工学類学長<p>筑波大学 社会工学域 助教</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="purple ui labeled icon buttons">
+                        <button class="ui button">
+                            <i class="inverted video icon"></i>
+                            会場リンクはこちら
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-            <div class="guest">
-            </div>
+            <!-- guest speakers -->
+            <section class="guests">
+                <div class="ui container">
+                    <h2 id="guest" style="color: white;">Guest speakers</h2>
+                    <div class="ui three link cards">
+                        <div class="purple card">
+                            <div class="image"><img src="img/asano_daisuke.jpg" alt=""></div>
+                            <div class="content">
+                                <div class="header">浅野 大介</div>
+                                <div class="description">経済産業省 サービス政策課長 教育産業室長</div>
+                            </div>
+                        </div>
+                        <div class="purple card">
+                            <div class="image"><img src="img/ubie_abe.jpg" alt=""></div>
+                            <div class="content">
+                                <div class="header">阿部 吉倫</div>
+                                <div class="description">Ubie株式会社 共同代表取締役医師</div>
+                            </div>
+                        </div>
+                        <div class="purple card">
+                            <div class="image"><img src="img/hunaki.jpg" alt=""></div>
+                            <div class="content">
+                                <div class="header">船木 謙一</div>
+                                <div class="description">日立製作所 コーポレートベンチャリング室</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
 
+        <!-- footer -->
         <div class="footer">
+            <div class="ui container" style="text-align: left;">
+                <div class="ui divided equal height grid">
+                    <div class="six wide column">
+                        <h4 class="ui header">主催</h4>
+                        <p>筑波大学大学院 理工生命学術院 システム情報工学研究科<br>社会工学専攻 サービス工学学位プログラム</p>
+                        <p>筑波大学 理工学群 社会工学類</p>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui header">お問い合わせ</h4>
+                        <p>サービス工学シンポジウム実行委員会</p>
+                    </div>
+                    <div class="six wide column">
+                        <h4 class="ui header">関連リンク</h4>
+                        <div class="ui link list">
+                            <a href="" class="item">社会工学類</a>
+                            <a href="" class="item">サービス工学学位プログラム</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>
