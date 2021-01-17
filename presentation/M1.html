@@ -9,123 +9,296 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
         <script src="../js/semantic.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style_top.css">
     </head>
 
     <body>
-        <div class="header">
-
-        </div>
-
         <div class="main">
-            <h2 class="ui material-title">Presentation slide</h2>
+                <div class="ui fixed inverted compact labeled icon menu">
+                    <div class="ui container">
+                        <a href="#" class="item" style="padding-top: 27px;">社会工学データサイエンスシンポジウム</a>
+                        <div class="right menu">
+                            <a href="#" class="purple item"><i class="inverted home icon"></i>Home</a>
+                            <a href="#" class="purple item"><i class="inverted file alternate icon"></i>Documents</a>
+                            <a href="#" class="purple item"><i class="inverted envelope icon"></i>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+            <section>
+                <h2>Presentation slide</h2>
+            </section>
+
             <div class="grade">
-                <ul class="center">
-                    <li><button class="now_page button_style" onclick="location.href='M1.html'" type="button">M1</button></li>
-                    <li><button class="button_style" onclick="location.href='M2.html'" type="button">M2</button></li>
-                    <li><button class="button_style purple item active" onclick="location.href='Project.html'" type="button">Project</button></li>
-                </ul>
-            </div>
+                <div class="ui container">
+                    <div class="ui three column grid center aligned">
+                        <div class="column">
+                        <button class="big ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
+                        </div>
+                        <div class="column">
+                            <button class="big ui button" onclick="location.href='M2.html'" type="button">M2</button>
+                        </div>
+                        <div class="column">
+                            <button class="big ui button" onclick="location.href='Project.html'" type="button">Project</button>
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+
+            
 
             <section class="materials">
-                <div class="materials-inner inner">
-
-                    <div class="card-container">
+                <div class="ui container">
+                    <div class="ui cards centered">
                         <!-- card-item -->
-                        <article class="card">
-                            <div class="card__header">
-                            <h3 class="card__title">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</h3>
-                            <iframe src="https//www.slideshare.net/slideshow/embed_code/key/d2SbQyyFjaHppr" class="card__slide" width="342" height="250" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card__body">
-                            <p class="card__text">岡本 大河</p>
-                            <p class="card__text -number">①15：00〜15：30 ②16：00〜16：30</p>
+                            <div class="extra content">
+                                <div class="ui tag labels left floated">
+                                    <p><i class="bug icon"></i>需要予測</p>
+                                    <p><i class="globe icon"></i>ネットワーク</p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__footer">
-                            <button class="ui youtube button card__button">
-                            <i class="youtube icon card__text"></i>
-                            YouTube
-                            </button>
-                            </div>
-                        </article>
-
-                        <!-- card-item -->
-                        <article class="card">
-                            <div class="card__header">
-                            <h3 class="card__title">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</h3>
-                            <iframe src="https://drive.google.com/file/d/1bqQBjcCo9SK-mJQCCA93RI_wpqTRufto/view?usp=sharing" class="card_slide" width="342" height="250"></iframe>
-                            </div>
-                            <div class="card__body">
-                            <p class="card__text">岡本 大河</p>
-                            <p class="card__text -number">&yen; 15,000</p>
-                            </div>
-                            <div class="card__footer">
-                            <p class="card__text"><a href="https://youtu.be/iL7lePjR10U" class="button -compact">発表を見る</a></p>
-                            </div>
-                        </article>
-
-                        <!-- card-item -->
-                        <article class="card">
-                            <div class="card__header">
-                            <h3 class="card__title">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</h3>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TzWgFmGJ6Z0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="card__body">
-                            <p class="card__text">岡本 大河</p>
-                            <p class="card__text -number">&yen; 15,000</p>
-                            </div>
-                            <div class="card__footer">
-                            <p class="card__text"><a href="https://youtu.be/iL7lePjR10U" class="button -compact">発表を見る</a></p>
-                            </div>
-                        </article>
+                        </div>
 
                         <!-- card-item -->
-                        <article class="card">
-                            <div class="card__header">
-                            <h3 class="card__title">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</h3>
-                            <iframe width="342" height="250" srcdoc="<h2>直接HTMLを書く</h2><p>こんにちは</p>" src="https://www.youtube.com/embed/TzWgFmGJ6Z0"></iframe>
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card__body">
-                            <p class="card__text">岡本 大河</p>
-                            <p class="card__text -number">&yen; 15,000</p>
+                            <div class="extra content middle alignedgrid">
+                                <div class="ui tag labels left floated">
+                                    <p><a class="ui tag label left floated">需要予測</a></p>
+                                    <p><a class="ui teal tag label left floated">network</a></p>
+                                    <p><a class="ui blue tag label left floated">AI</a></p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__footer">
-                            <p class="card__text"><a href="https://youtu.be/iL7lePjR10U" class="button -compact">発表を見る</a></p>
-                            </div>
-                        </article>
+                        </div>
 
                         <!-- card-item -->
-                        <article class="card">
-                            <div class="card__header">
-                            <h3 class="card__title">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</h3>
-                            <iframe src="https//www.slideshare.net/slideshow/embed_code/key/aaRmQszUSXt2Q6" width="340" height="290" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card__body">
-                            <p class="card__text">岡本 大河</p>
-                            <p class="card__text -number">&yen; 15,000</p>
+                            <div class="extra content">
+                                <div class="ui tag labels left floated">
+                                    <p><i class="bug icon"></i>需要予測</p>
+                                    <p><i class="globe icon"></i>ネットワーク</p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
                             </div>
-                            <div class="card__footer">
-                            <p class="card__text"><a href="https://youtu.be/iL7lePjR10U" class="button -compact">発表を見る</a></p>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
                             </div>
-                        </article>
+                            <div class="extra content">
+                                <div class="ui tag labels left floated">
+                                    <p><a class="ui tag label left floated">需要予測</a></p>
+                                    <p><a class="ui teal tag label left floated">network</a></p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="ui tag labels left floated">
+                                    <p><i class="bug icon"></i>需要予測</p>
+                                    <p><i class="globe icon"></i>ネットワーク</p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=60000" frameborder="0" width="290" height="192" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <div class="content">
+                                <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
+                                <div class="meta right floated" style="margin-bottom:1em">岡本　大河</div>
+                                <div class="ui two column grid description segment">
+                                    <div class="column">
+                                        <div>　</div>
+                                        <div>ポスター発表</div>
+                                        <div>　</div>
+                                    </div>
+                                    <div class="column">
+                                        <div>①15:00~15:30</div>
+                                        <div>②16:00~16:30</div>
+                                        <div>③17:00~17:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="ui tag labels left floated">
+                                    <p><a class="ui tag label left floated">需要予測</a></p>
+                                    <p><a class="ui teal tag label left floated">network</a></p>
+                                </div>
+                                <div>
+                                    <button class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>
+                                    YouTube
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        
 
                     </div> <!-- /card-container -->
                 </div> <!-- /card-inner -->
             </section> <!-- /materials -->
 
-            <div class="grade">
-                <ul class="center">
-                    <li><button class="now_page button_style" onclick="location.href='M1.html'" type="button">M1</button></li>
-                    <li><button class="button_style" onclick="location.href='M2.html'" type="button">M2</button></li>
-                    <li><button class="button_style" onclick="location.href='Project.html'" type="button">Project</button></li>
-                </ul>
-            </div>
+            <section class="grade">
+                <div class="ui container">
+                <div class="ui three column grid center aligned">
+                    <div class="column">
+                    <button class="big ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
+                    </div>
+                    <div class="column">
+                        <button class="big ui button" onclick="location.href='M2.html'" type="button">M2</button>
+                    </div>
+                    <div class="column">
+                        <button class="big ui button" onclick="location.href='Project.html'" type="button">Project</button>
+                    </div>
+                </div>
+                </div>  
+            </section>  
 
         </div>
 
 
 
+        <!-- footer -->
         <div class="footer">
-
+            <div class="ui container" style="text-align: left;">
+                <div class="ui divided equal height grid">
+                    <div class="six wide column">
+                        <h4 class="ui header">主催</h4>
+                        <p>筑波大学大学院 理工生命学術院 システム情報工学研究科<br>社会工学専攻 サービス工学学位プログラム</p>
+                        <p>筑波大学 理工学群 社会工学類</p>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui header">お問い合わせ</h4>
+                        <p>サービス工学シンポジウム実行委員会</p>
+                    </div>
+                    <div class="six wide column">
+                        <h4 class="ui header">関連リンク</h4>
+                        <div class="ui link list">
+                            <a href="" class="item">社会工学類</a>
+                            <a href="" class="item">サービス工学学位プログラム</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>
