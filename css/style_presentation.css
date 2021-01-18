@@ -32,18 +32,11 @@ https://sato-you.com/side_by_side_cards/
   left: 0;
 }
 
-iframe{
-  border:none;
-}
 .materials{
   background-color:#DEF0EA;
   margin:100 0;
   padding-top:20px;
-  padding-bottom:120px;
-}
-
-.card{
-  width: 400px;
+  padding-bottom:20px;
 }
 
 .extra{
