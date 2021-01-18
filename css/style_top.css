@@ -24,6 +24,7 @@ section h2 {
     font-size: 46px;
     text-align: center;
     padding-bottom: 0.7em;
+    letter-spacing: 0.1em;
 }
 
 /* top */
@@ -40,7 +41,6 @@ section h2 {
 .about {
     background-color: #DEF0EA;
 }
-/* スタイルが全然適用されない */
 .about img {
     width: 270px;
 }
@@ -48,20 +48,25 @@ section h2 {
 /* schedule */
 td.center.aligned{
     font-weight: bold;
-    font-size: 16x;
+    font-size: 16px;
+}
+.purple.ui.labeled.icon.buttons {
+    margin-bottom: 30px;
 }
 
 /* guest speakers */
 .purple.card {
     padding: 2em;
 }
-
 .guests {
     background-image: url('../img/tsukuba.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(00, 00, 00, 0.50);
+}
+.guest-name {
+    background: linear-gradient(transparent 60%, rgba(163, 51, 200, 0.5) 60%);
 }
 
 /* footer */
