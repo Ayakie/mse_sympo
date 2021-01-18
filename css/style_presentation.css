@@ -1,0 +1,48 @@
+section h2{
+  padding-top:50px;
+}
+/* ------------------　切り替えボタン　------------------ */
+.grade{
+  width:400px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:20px;
+}
+/* ------------------　切り替えボタン　------------------ */
+
+/* ------------------　資料達　------------------ */
+/* 参考
+https://shibajuku.net/card-component-markup/ 
+https://sato-you.com/side_by_side_cards/
+*/
+
+.g-slide{
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0 20px 0;
+  padding-bottom: 50%;
+  padding-top: 65px;
+}
+.g-slide iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.materials{
+  background-color:#DEF0EA;
+  margin:100 0;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.extra{
+  text-align: start;
+  margin-top:auto;
+  margin-top:auto;
+}
+
+/* ------------------　資料達　------------------ */
