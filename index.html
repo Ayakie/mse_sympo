@@ -11,6 +11,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/semantic.min.css">
         <link rel="stylesheet" href="css/style_top.css">
+        <script>
+            $(document)
+              .ready(function() {
+                // show dropdown on hover
+                $('.ui.dropdown').dropdown({
+                  on: 'hover'
+                });
+              })
+            ;
+        </script>
     </head>
 
     <body>
@@ -24,8 +34,13 @@
                         <a href="#" class="item" style="padding-top: 27px;">社会工学データサイエンスシンポジウム</a>
                         <div class="right menu">
                             <a href="#" class="purple item"><i class="inverted home icon"></i>Home</a>
-                            <a href="#" class="purple item"><i class="inverted file alternate icon"></i>Documents</a>
-                            <a href="#" class="purple item"><i class="inverted envelope icon"></i>Contact</a>
+                            <a href="presentation/M1.html" class="purple item"><i class="inverted file alternate icon"></i>Documents</a>
+                            <div class="ui dropdown purple item"><i class="inverted graduation cap icon"></i>Link
+                                <div class="menu">
+                                    <a href="https://www.sk.tsukuba.ac.jp/College/index.php" class="item" target="_blank">つくばの社工</a>
+                                    <a href="https://www.sk.tsukuba.ac.jp/PPS/se/" class="item" target="_blank">サービス工学学位プログラム</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,13 +54,13 @@
                     <div class="ui three column grid">
                         <div class="row">
                             <div class="column">
-                                <img src="img/remo.png" alt="">
+                                <img src="img/remo.png">
                             </div>
                             <div class="column">
-                                <img src="img/ubie_abe.jpg" alt="">
+                                <img src="img/ubie_abe.jpg">
                             </div>
                             <div class="column">
-                                <img src="img/dummy.png" alt="">
+                                <img src="img/dummy.png">
                             </div>
                         </div>
                         <div class="row">
@@ -77,18 +92,18 @@
                             </tr>
                             <tr>
                                 <td>来賓祝辞</td>
-                                <td>浅野 大介様</td>
+                                <td><span class="guest-name">浅野 大介</span> 様</td>
                                 <td>経済産業省 サービス政策課長 教育産業室長</td>
                             </tr>
                             <tr>
                                 <td>基調講演</td>
-                                <td>阿部 吉倫様</td>
+                                <td><span class="guest-name">阿部 吉倫</span> 様</td>
                                 <td>Ubie株式会社 共同代表取締役医師</td>
                             </tr>
                             <tr>
                                 <td rowspan="3" class="center aligned"><p>第二部</p><p>14:30 ~ 15:30</p></td>
                                 <td>ディスカッセント</td>
-                                <td>船木 謙一様</td>
+                                <td><span class="guest-name">船木 謙一</span> 様</td>
                                 <td>日立製作所 コーポレートベンチャリング室</td>
                             </tr>
                             <tr>
@@ -99,7 +114,28 @@
                         </tbody>
                     </table>
                     <div class="purple ui labeled icon buttons">
-                        <button class="ui button">
+                        <button class="ui button" onclick="location.href='https://www.notion.so/HP-9fab30f4508e4a93aa4bafd9a076815e'">
+                            <i class="inverted video icon"></i>
+                            会場リンクはこちら
+                        </button>
+                    </div>
+
+                    <table class="ui single line striped table">
+                        <tbody>
+                            <tr>
+                                <td class="center aligned"><p>第三部</p><p>15:30 ~ 17:30</p></td>
+                                <td>ポスターセッション</td>
+                                <td>修士１年・修士２年の学生による研究発表</td>
+                            </tr>
+                            <tr>
+                                <td class="center aligned"><p>第四部</p><p>17:30 ~ 18:30</p></td>
+                                <td>情報交換会</td>
+                                <td>軽食を交えた自由なフロアディスカッション</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="purple ui labeled icon buttons">
+                        <button class="ui button" onclick="location.href='https://www.notion.so/Semantic-UI-cb888b7ffcde46e59acd964103ed1579/'">
                             <i class="inverted video icon"></i>
                             会場リンクはこちら
                         </button>
@@ -113,21 +149,21 @@
                     <h2 id="guest" style="color: white;">Guest speakers</h2>
                     <div class="ui three link cards">
                         <div class="purple card">
-                            <div class="image"><img src="img/asano_daisuke.jpg" alt=""></div>
+                            <div class="image"><img src="img/asano_daisuke.jpg"></div>
                             <div class="content">
                                 <div class="header">浅野 大介</div>
                                 <div class="description">経済産業省 サービス政策課長 教育産業室長</div>
                             </div>
                         </div>
                         <div class="purple card">
-                            <div class="image"><img src="img/ubie_abe.jpg" alt=""></div>
+                            <div class="image"><img src="img/ubie_abe.jpg"></div>
                             <div class="content">
                                 <div class="header">阿部 吉倫</div>
                                 <div class="description">Ubie株式会社 共同代表取締役医師</div>
                             </div>
                         </div>
                         <div class="purple card">
-                            <div class="image"><img src="img/hunaki.jpg" alt=""></div>
+                            <div class="image"><img src="img/hunaki.jpg"></div>
                             <div class="content">
                                 <div class="header">船木 謙一</div>
                                 <div class="description">日立製作所 コーポレートベンチャリング室</div>
@@ -145,23 +181,38 @@
                 <div class="ui divided equal height grid">
                     <div class="six wide column">
                         <h4 class="ui header">主催</h4>
-                        <p>筑波大学大学院 理工生命学術院 システム情報工学研究科<br>社会工学専攻 サービス工学学位プログラム</p>
+                        <p>筑波大学大学院 理工情報生命学術院 システム情報工学研究群<br>社会工学専攻 サービス工学学位プログラム</p>
                         <p>筑波大学 理工学群 社会工学類</p>
                     </div>
                     <div class="four wide column">
                         <h4 class="ui header">お問い合わせ</h4>
-                        <p>サービス工学シンポジウム実行委員会</p>
+                        <p></p>
+                        <div class="ui list">
+                            <a href="" target="_blank" class="item">
+                                <i class="envelope icon"></i>
+                                サービス工学シンポジウム実行委員会
+                            </a>
+                        </div>
                     </div>
                     <div class="six wide column">
                         <h4 class="ui header">関連リンク</h4>
-                        <div class="ui link list">
-                            <a href="" class="item">社会工学類</a>
-                            <a href="" class="item">サービス工学学位プログラム</a>
+                        <div class="ui list">
+                            <a href="https://www.sk.tsukuba.ac.jp/College/index.php" target="_blank" class="item">
+                                <i class="right triangle icon"></i>
+                                筑波大学 理工学群 社会工学類
+                            </a>
+                            <a href="https://www.sie.tsukuba.ac.jp/" target="_blank" class="item">
+                                <i class="right triangle icon"></i>
+                                筑波大学大学院 理工情報生命学術院 システム情報工学研究群
+                            </a>
+                                <ul>
+                                    <li value="-"><a href="https://www.sk.tsukuba.ac.jp/PPS/pps/" target="_blank">社会工学学位プログラム</a></li>
+                                    <li value="-"><a href="https://www.sk.tsukuba.ac.jp/PPS/se/" target="_blank">サービス工学学位プログラム</a></li>
+                                </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </body>
 </html>
