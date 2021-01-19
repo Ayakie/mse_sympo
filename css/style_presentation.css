@@ -1,6 +1,19 @@
-section h2{
-  padding-top:80px;
+.main{
+  background-color:#def0e7;
+}
+
+.presentation{
+  padding: 2em 0 1em 0;
+}
+
+.presentation h2{
+  padding-top:90px;
   margin-bottom: 0px;
+  font-family: 'Permanent Marker';
+  font-size: 46px;
+  text-align: center;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.1em;
 }
 /* ------------------　切り替えボタン　------------------ */
 .grade{
@@ -37,9 +50,8 @@ https://sato-you.com/side_by_side_cards/
 }
 
 .materials{
-  background-color:#DEF0EA;
-  padding-top:1em;
-  padding-bottom:1em;
+  /* background-color:#DEF0EA; */
+  margin:1em auto;
 }
 
 .extra{
@@ -52,5 +64,6 @@ https://sato-you.com/side_by_side_cards/
 
 /* ------------------　投票ボタン　------------------ */
 .voting{
-  margin-bottom:1em;
+  margin-top:2em;
+  padding-bottom:1em;
 }
