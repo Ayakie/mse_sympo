@@ -1,13 +1,12 @@
 section h2{
-  padding-top:50px;
+  padding-top:80px;
+  margin-bottom: 0px;
 }
 /* ------------------　切り替えボタン　------------------ */
 .grade{
   width:300px;
-  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:20px;
 }
 /* ------------------　切り替えボタン　------------------ */
 
@@ -16,6 +15,11 @@ section h2{
 https://shibajuku.net/card-component-markup/ 
 https://sato-you.com/side_by_side_cards/
 */
+
+.card{
+  /* 適用されないんだけど */
+  width:400px;
+}
 
 .g-slide{
   position: relative;
@@ -34,15 +38,19 @@ https://sato-you.com/side_by_side_cards/
 
 .materials{
   background-color:#DEF0EA;
-  margin:100 0;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:1em;
+  padding-bottom:1em;
 }
 
 .extra{
   text-align: start;
-  margin-top:auto;
+  margin-top:0px;
   margin-top:auto;
 }
 
 /* ------------------　資料達　------------------ */
+
+/* ------------------　投票ボタン　------------------ */
+.voting{
+  margin-bottom:1em;
+}
