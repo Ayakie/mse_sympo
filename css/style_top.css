@@ -71,3 +71,7 @@ td.center.aligned{
     padding: 5em 0;
     background-color: #DEF0EA;
 }
+.ui.facebook.button {
+    margin: 0 40px;
+    width: 60%;
+}
