@@ -55,9 +55,6 @@ td.center.aligned{
 }
 
 /* guest speakers */
-.purple.card {
-    padding: 2em;
-}
 .guests {
     background-image: url('../img/tsukuba.jpeg');
     background-size: cover;
