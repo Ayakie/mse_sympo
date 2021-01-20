@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 body{
-    font-family: 'Noto Sans JP', 'Open Sans', sans-serif !important;
-    text-align: center !important;
+    font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 section {
