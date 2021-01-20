@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-/* 優先されない */
-@font-face {
-    font-family: 'Icons';
-    src: url("../fonts/icons.woff2") format('woff') !important;
-}
-@font-face {
-    font-family: 'outline-icons';
-    src: url("../fonts/outline-icons.woff2") format('woff') !important;
-}
-
 body{
     font-family: 'Noto Sans JP', 'Open Sans', sans-serif !important;
     text-align: center !important;
