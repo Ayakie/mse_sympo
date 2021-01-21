@@ -2,11 +2,11 @@
   background-color:#def0e7;
 }
 
-.presentation{
-  padding: 2em 0 1em 0;
+.head{
+  padding-top: 2em;
 }
 
-.presentation h2{
+.head h2{
   padding-top:90px;
   margin-bottom: 0px;
   font-family: 'Permanent Marker';
@@ -16,22 +16,9 @@
   letter-spacing: 0.1em;
 }
 
-.placemaking{
-  padding-bottom:1em;
-}
-
-.placemaking h2{
-  padding-top:90px;
-  margin-bottom: 0px;
-  font-family: 'Permanent Marker';
-  font-size: 46px;
-  text-align: center;
-  padding-bottom: 0.5em;
-  letter-spacing: 0.1em;
-}
 /* ------------------　切り替えボタン　------------------ */
 .grade{
-  width:500px;
+  width:300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -42,6 +29,35 @@
 https://shibajuku.net/card-component-markup/ 
 https://sato-you.com/side_by_side_cards/
 */
+
+/* 移動先をheaderで隠さないようにするため */
+a.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+.materials{
+  /* background-color:#DEF0EA; */
+  margin:1em auto;
+}
+
+.materials h3{
+  padding-top:30px;
+  margin-bottom: 0px;
+  font-family: 'Permanent Marker';
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+.seg-content{
+  margin-bottom: 1em;
+}
+.seg-title{
+  font-size:20px;
+}
 
 .card{
   /* 適用されないんだけど */
@@ -61,11 +77,6 @@ https://sato-you.com/side_by_side_cards/
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.materials{
-  /* background-color:#DEF0EA; */
-  margin:1em auto;
 }
 
 .extra{
