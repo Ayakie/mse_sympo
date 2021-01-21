@@ -1,3 +1,10 @@
+/* 移動先をheaderで隠さないようにするため */
+a.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
 .main{
   background-color:#def0e7;
 }
@@ -29,13 +36,6 @@
 https://shibajuku.net/card-component-markup/ 
 https://sato-you.com/side_by_side_cards/
 */
-
-/* 移動先をheaderで隠さないようにするため */
-a.anchor {
-  display: block;
-  padding-top: 70px;
-  margin-top: -70px;
-}
 
 .materials{
   /* background-color:#DEF0EA; */
