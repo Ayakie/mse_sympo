@@ -58,14 +58,13 @@ td.center.aligned{
 
 /* footer */
 .footer {
-    padding: 5em 0;
+    padding: 5em 0 2em;
     background-color: #DEF0EA;
 }
 .ui.facebook.button {
     margin: 0 40px;
-    width: 35%;
 }
-#tsukuba-footer {
-    margin-top: 10px;
-    text-align: center;
+.copyright {
+    margin-top: 30px;
+    color: #676767;
 }
