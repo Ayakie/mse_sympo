@@ -55,6 +55,9 @@ a.anchor {
 .seg-content{
   margin-bottom: 1em;
 }
+.seg-title{
+  font-size:20px;
+}
 
 .card{
   /* 適用されないんだけど */
