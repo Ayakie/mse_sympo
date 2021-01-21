@@ -14,7 +14,7 @@
         <!-- original style sheet -->
         <link rel="stylesheet" href="../css/style_presentation.css">
         <link rel="stylesheet" href="../css/style_top.css">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
         <!-- jQuery -->
         <script>
             $(document)
@@ -25,7 +25,19 @@
                 });
               })
             ;
+
+            $(function(){
+            $('a[href^="#"]').click(function(){
+                var speed = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+            });
+            });
         </script>
+    
     </head>
 
     <body>
@@ -51,17 +63,24 @@
                 <div class="ui container">
                     <h2>Presentation slide</h2>
                     <div class="grade">
-                        <div class="ui three column grid center aligned">
-                            <div class="column">
-                            <button class="large ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
+                        <div class="ui purple three item menu">
+                            <a class="active item" href="M1.html">
+                              M1
+                            </a>
+                            <a class="item" href="M2.html">
+                              M2
+                            </a>
+                            <div class="item">
+                                <div class="ui dropdown ">
+                                    <div class="text">Project</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <a href="Project.html#project" class="item">Project</a>
+                                        <a href="Project.html#placemaking" class="item">PlaceMaking</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="column">
-                                <button class="large ui button" onclick="location.href='M2.html'" type="button">M2</button>
-                            </div>
-                            <div class="column">
-                                <button class="large ui button" onclick="location.href='Project.html'" type="button">Project</button>
-                            </div>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -71,20 +90,17 @@
                     <div class="ui cards centered">
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -107,20 +123,17 @@
 
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -143,20 +156,17 @@
 
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -179,20 +189,17 @@
 
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -215,20 +222,17 @@
 
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -251,20 +255,17 @@
 
                         <!-- card-item -->
                         <div class="card" style="width:400px;">
-                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUYS_b9NMkkEbZFY6qVMUBVGyBVganOHrAYRRWBBZ6-Vb62uToUl-P8gaJGENax45GO1p40gUle7Ap/embed?start=false&loop=false&delayms=3000" frameborder="0" width="400" height="254" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="width:100%;"></iframe>
                             <div class="content">
                                 <div class="header">Reservoir Computing の原理を用いた都市圏高速道路における渋滞発生予測</div>
                                 <div class="meta right floated" style="margin:1em">岡本　大河</div>
-                                <div class="ui two column grid description segment" style="margin-bottom:0.3em;">
+                                <div class="ui two column grid description segment" style="margin-bottom:0.1em;">
                                     <div class="column">
-                                        <div>　</div>
-                                        <div>ポスター発表</div>
-                                        <div>　</div>
+                                        <div style="margin:0.6em;">ポスター発表</div>
                                     </div>
                                     <div class="column">
                                         <div>①15:00~15:30</div>
                                         <div>②16:00~16:30</div>
-                                        <div>③17:00~17:30</div>
                                     </div>
                                 </div>
                             </div>
@@ -289,30 +290,12 @@
                 </div> <!-- /card-inner -->
             </div> <!-- /materials -->
 
-            <div class="lower-button">
-                <div class="grade">
-                    <div class="ui container">
-                    <div class="ui three column grid center aligned">
-                        <div class="column">
-                        <button class="large ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
-                        </div>
-                        <div class="column">
-                            <button class="large ui button" onclick="location.href='M2.html'" type="button">M2</button>
-                        </div>
-                        <div class="column">
-                            <button class="large ui button" onclick="location.href='Project.html'" type="button">Project</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="voting">
                 <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
                 <i class="archive icon"></i>投票はこちらから
                 </button>
             </div>
-
+            <div id="page_top"><a href="#"></a>
         </div>
 
 
