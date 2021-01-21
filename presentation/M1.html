@@ -25,30 +25,19 @@
                 });
               })
             ;
-        </script>
-        
-        <!-- jQuery.jsの読み込み -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
-        <!-- スムーズスクロール部分の記述 -->
-        <script>
-        $(function(){
-        // #で始まるアンカーをクリックした場合に処理
-        $('a[href^=#]').click(function() {
-            // スクロールの速度
-            var speed = 400; // ミリ秒
-            // アンカーの値取得
-            var href= $(this).attr("href");
-            // 移動先を取得
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            // 移動先を数値で取得
-            var position = target.offset().top;
-            // スムーススクロール
-            $('body,html').animate({scrollTop:position}, speed, 'swing');
-            return false;
-        });
-        });
+            $(function(){
+            $('a[href^="#"]').click(function(){
+                var speed = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+            });
+            });
         </script>
+    
     </head>
 
     <body>
@@ -81,9 +70,16 @@
                             <a class="item" href="M2.html">
                               M2
                             </a>
-                            <a class="item" href="Project.html">
-                              Project
-                            </a>
+                            <div class="item">
+                                <div class="ui dropdown ">
+                                    <div class="text">Project</div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <a href="Project.html#project" class="item">Project</a>
+                                        <a href="Project.html#placemaking" class="item">PlaceMaking</a>
+                                    </div>
+                                </div>
+                            </div>
                           </div>
                     </div>
                 </div>

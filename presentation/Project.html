@@ -25,29 +25,17 @@
                 });
               })
             ;
-        </script>
 
-        <!-- jQuery.jsの読み込み -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
-        <!-- スムーズスクロール部分の記述 -->
-        <script>
-        $(function(){
-        // #で始まるアンカーをクリックした場合に処理
-        $('a[href^=#]').click(function() {
-            // スクロールの速度
-            var speed = 400; // ミリ秒
-            // アンカーの値取得
-            var href= $(this).attr("href");
-            // 移動先を取得
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            // 移動先を数値で取得
-            var position = target.offset().top;
-            // スムーススクロール
-            $('body,html').animate({scrollTop:position}, speed, 'swing');
-            return false;
-        });
-        });
+            $(function(){
+            $('a[href^="#"]').click(function(){
+                var speed = 500;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+            });
+            });
         </script>
     </head>
 
@@ -70,21 +58,27 @@
                 </div>
             </div>
 
-            <div class="presentation">
+            <div class="presentation" id="project">
                 <div class="ui container">
                     <h2>Project Poster</h2>
                     <div class="grade">
                         <div class="ui purple three item menu">
-                            <a class="active item" href="M1.html">
+                            <a class="item" href="M1.html">
                               M1
                             </a>
                             <a class="item" href="M2.html">
                               M2
                             </a>
-                            <a class="item" href="Project.html">
-                              Project
-                            </a>
-                          </div>
+                            <div class="active item">
+                                <div class="ui pointing dropdown link">
+                                    <span class="text">Project</span>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        <a href="#project" class="item">Project</a>
+                                        <a href="#placemaking" class="item">PlaceMaking</a>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
