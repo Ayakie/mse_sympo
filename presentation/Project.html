@@ -14,7 +14,7 @@
         <!-- original style sheet -->
         <link rel="stylesheet" href="../css/style_presentation.css">
         <link rel="stylesheet" href="../css/style_top.css">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
         <!-- jQuery -->
         <script>
             $(document)
@@ -25,6 +25,29 @@
                 });
               })
             ;
+        </script>
+
+        <!-- jQuery.jsの読み込み -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+        <!-- スムーズスクロール部分の記述 -->
+        <script>
+        $(function(){
+        // #で始まるアンカーをクリックした場合に処理
+        $('a[href^=#]').click(function() {
+            // スクロールの速度
+            var speed = 400; // ミリ秒
+            // アンカーの値取得
+            var href= $(this).attr("href");
+            // 移動先を取得
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            // 移動先を数値で取得
+            var position = target.offset().top;
+            // スムーススクロール
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+        });
+        });
         </script>
     </head>
 
@@ -50,19 +73,17 @@
             <div class="presentation">
                 <div class="ui container">
                     <h2>Project Poster</h2>
+                    <a href="#placemaking">PlaceMaking</a>
                     <div class="grade">
                         <div class="ui grid center aligned">
                             <div class="three wide column">
-                            <button class="large ui button" onclick="location.href='M1.html'" type="button">M1</button>
+                            <button class="large ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
                             </div>
                             <div class="three wide column">
                                 <button class="large ui button" onclick="location.href='M2.html'" type="button">M2</button>
                             </div>
-                            <div class="four wide column">
-                                <button class="large ui purple button" onclick="location.href='Project.html'" type="button">Project</button>
-                            </div>
-                            <div class="four wide column">
-                                <button class="large ui button" onclick="location.href='PlaceMaking.html'" type="button">PlaceMaking</button>
+                            <div class="three wide column">
+                                <button class="large ui button" onclick="location.href='Project.html'" type="button">Project</button>
                             </div>
                         </div>
                     </div>
@@ -112,23 +133,94 @@
                 </div> <!-- /card-inner -->
             </div> <!-- /materials -->
 
-            <div class="grade">
-                <div class="ui grid center aligned">
-                    <div class="three wide column">
-                    <button class="large ui button" onclick="location.href='M1.html'" type="button">M1</button>
-                    </div>
-                    <div class="three wide column">
-                        <button class="large ui button" onclick="location.href='M2.html'" type="button">M2</button>
-                    </div>
-                    <div class="four wide column">
-                        <button class="large ui purple button" onclick="location.href='Project.html'" type="button">Project</button>
-                    </div>
-                    <div class="four wide column">
-                        <button class="large ui button" onclick="location.href='PlaceMaking.html'" type="button">PlaceMaking</button>
+            <div class="placemaking" id="placemaking">
+                <div class="ui container">
+                    <h2>Place Making Poster</h2>
+                    <div class="ui raised segment">
+                        <h3>講義テーマ</h3>
+                        <h4><span class="guest-name">With／Afterコロナのキャンパス・プレイスメイキング：感染に負けない学びと創発の場をつくる</span></h4>
+                        <p>新型コロナウイルス（COVID-19）の蔓延が、私達の生活に大きな影響を及ぼしている。大学ではオンライン授業を主体とし、長期に亘って入構が制限されてきた。今後は感染対策に努めながら、対面での実習を取り入れるなど、新たなキャンパス・ライフを模索していくこととなる。本講義では、必要な感染対策を前提としながら、大学生・大学院生の行動実態とニーズを踏まえ、安全かつ豊かな大学生活を実現するキャンパスの空間活用アイディアの提案を目的としたグループワークを行う。クラスターの発生を予防しつつ、学生や教職員のクリエイティビティを刺激し、生産性やモチベーションの向上につながる学びの場をいかにつくるか。大学構内の豊かな空間をフル活用し、つくばのまちづくりをも大きく変えていくような、新たなキャンパス・ライフを  提案してほしい</p>
                     </div>
                 </div>
             </div>
 
+            <div class="materials">
+                <div class="container">
+                    <div class="ui cards centered">
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/10rhlbJpmJdj4bupAO6jIuQXxNQDydRab/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">オンラインに対応した新しいキャンパス</div>
+                                <div class="meta right floated" style="margin:1em">1班</div>
+                                </div>
+                            </div>
+
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/143lhUqXoWn3d2eNMCzx_Bj7lIXlZdMR1/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">Creative Hub Tsukuba</div>
+                                <div class="meta right floated" style="margin:1em">2班</div>
+                                </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/1YDuYGmz0PxJkdKQ-h4wwNbf5UDqTF7q4/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">キャンピング・キャンパス</div>
+                                <div class="meta right floated" style="margin:1em">3班</div>
+                                </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/10tDFhDrFIi5cFnT7D6xAQjoT1swe6i7t/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">学外者を内包するコワーキングスペース</div>
+                                <div class="meta right floated" style="margin:1em">4班</div>
+                                </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/1p1alR_5Z3N9kaEOzd4zqvrIF2i59tvtp/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">筑波大学中央図書館の空間活用-withコロナ-</div>
+                                <div class="meta right floated" style="margin:1em">5班</div>
+                                </div>
+                        </div>
+
+                        <!-- card-item -->
+                        <div class="card" style="width:400px;">
+                            <iframe src="https://drive.google.com/file/d/1PCitKQXqMVLzsJBINts3ZikWNiYyRmVQ/preview" width="400" height="550"></iframe>
+                            <div class="content">
+                                <div class="header">松美池改革</div>
+                                <div class="meta right floated" style="margin:1em">6班</div>
+                                </div>
+                        </div>
+
+
+
+                    </div> <!-- /card-container -->
+                </div> <!-- /card-inner -->
+            </div> <!-- /materials -->
+
+            <div class="grade">
+                <div class="ui grid center aligned">
+                    <div class="three wide column">
+                    <button class="large ui purple button" onclick="location.href='M1.html'" type="button">M1</button>
+                    </div>
+                    <div class="three wide column">
+                        <button class="large ui button" onclick="location.href='M2.html'" type="button">M2</button>
+                    </div>
+                    <div class="three wide column">
+                        <button class="large ui button" onclick="location.href='Project.html'" type="button">Project</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page_top"><a href="#"></a>
         </div>
 
 
