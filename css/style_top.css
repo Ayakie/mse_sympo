@@ -46,7 +46,7 @@ td.center.aligned{
 
 /* guest speakers */
 .guests {
-    background-image: url('../img/tsukuba.jpeg');
+    background-image: url('../img/tsukuba_square.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
