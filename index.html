@@ -10,15 +10,21 @@
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <!-- font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Permanent+Marker&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
         <!-- original style sheet -->
         <link rel="stylesheet" href="css/style_top.css">
+
+        <!-- jQuery -->
         <script>
             $(document)
               .ready(function() {
                 // show dropdown on hover
                 $('.ui.dropdown').dropdown({
-                  on: 'hover'
+                    on: 'hover'
+                });
+                $('.ui.purple.card').popup({
+                    inline: true,
+                    position: 'bottom center'
                 });
               })
             ;
@@ -35,8 +41,15 @@
                     <div class="ui container">
                         <a href="#" class="item" style="padding-top: 27px;">社会工学データサイエンスシンポジウム</a>
                         <div class="right menu">
-                            <a href="#" class="purple item"><i class="inverted home icon"></i>Home</a>
-                            <a href="presentation/M1.html" class="purple item"><i class="inverted file alternate icon"></i>Documents</a>
+                            <a href="#" class="ui purple item"><i class="inverted home icon"></i>Home</a>
+                            <div class="ui dropdown purple item">
+                                <i class="inverted file alternate icon"></i>Material
+                                <div class="menu">
+                                    <a href="presentation/student.html" class="ui dropdown item">Student
+                                    </a>
+                                    <a href="presentation/project.html" class="item">Project</a>
+                                </div>
+                            </div>
                             <div class="ui dropdown purple item"><i class="inverted graduation cap icon"></i>Link
                                 <div class="menu">
                                     <a href="https://www.sk.tsukuba.ac.jp/College/index.php" class="item" target="_blank">つくばの社工</a>
@@ -46,6 +59,9 @@
                         </div>
                     </div>
                 </div>
+
+                <h1 class="page-title">第７回 筑波大学<br>サービス工学シンポジウム</h1>
+                <h1 class="event-time">2020.02.12(Fri)<br>13:00 〜 18:00 @online</h1>
 
             </div>
 
@@ -109,7 +125,7 @@
                                 <td>日立製作所 コーポレートベンチャリング室</td>
                             </tr>
                             <tr>
-                                <td rowspan="2">コンセプト紹介・デモ</td>
+                                <td rowspan="2"><a href="">コンセプト紹介・デモ</a></td>
                                 <td>鈴木 勉<p>大山 智也</p></td>
                                 <td>筑波大学 理工学群 社会工学類学長<p>筑波大学 社会工学域 助教</p></td>
                             </tr>
@@ -126,7 +142,7 @@
                         <tbody>
                             <tr>
                                 <td class="center aligned"><p>第三部</p><p>15:30 ~ 17:30</p></td>
-                                <td>ポスターセッション</td>
+                                <td><a href="presentation/student.html">ポスターセッション</a></td>
                                 <td>修士１年・修士２年の学生による研究発表</td>
                             </tr>
                             <tr>
@@ -150,27 +166,30 @@
                 <div class="ui container">
                     <h2 id="guest" style="color: white;">Guest speakers</h2>
                     <div class="ui three link cards">
-                        <div class="purple card">
-                            <div class="image"><img src="img/asano_daisuke.jpg"></div>
+                        <div class="ui purple card">
+                            <div class="guest image"><img src="img/asano_daisuke.png"></div>
                             <div class="content">
                                 <div class="header">浅野 大介</div>
-                                <div class="description">経済産業省 サービス政策課長 教育産業室長</div>
+                                <div class="description">経済産業省商務・サービスグループ<br>サービス政策課長（兼）教育産業室長</div>
                             </div>
                         </div>
-                        <div class="purple card">
-                            <div class="image"><img src="img/ubie_abe.jpg"></div>
+                        <div class="ui popup">2001年入省。資源エネルギー、物流、危機管理、知的財産、地域経済、マクロ経済分析等の業務を経て、2015年6月より資源エネルギー庁資源・燃料部政策課長補佐（部内総括）、2016年7月より大臣官房政策企画委員としてサービス政策と産業保安政策の部局再編を担当し、その際に教育産業室の発足を企画。2017年7月より大臣官房政策審議室企画官、10月より教育産業室長を兼務、2018年７月より現職。</div>
+                        <div class="ui purple card">
+                            <div class="guest image"><img src="img/ubie_abe.jpg"></div>
                             <div class="content">
                                 <div class="header">阿部 吉倫</div>
                                 <div class="description">Ubie株式会社 共同代表取締役医師</div>
                             </div>
                         </div>
-                        <div class="purple card">
-                            <div class="image"><img src="img/funaki.jpg"></div>
+                        <div class="ui popup">2015年東京大学医学部医学科卒業後、東京大学医学部附属病院、東京都健康長寿医療センターで初期研修を修了。2017年5月にUbie株式会社を共同創業、全国の病院向けにAIを用いた問診システム(AI問診Ubie)の提供を始める。第３回日本サービス大賞厚生労働大臣賞受賞。2020年 Forbes 30 Under Asia Healthcare & Science 部門選出。</div>
+                        <div class="ui purple card">
+                            <div class="guest image"><img src="img/funaki.jpg"></div>
                             <div class="content">
                                 <div class="header">船木 謙一</div>
                                 <div class="description">日立製作所 コーポレートベンチャリング室</div>
                             </div>
                         </div>
+                        <div class="ui popup">早稲田大学大学院修士課程修了（理工学研究科工業経営専門分野）後、日立製作所入社。工場設計、生産システム、サプライチェーンマネジメントシステム、サービスデザインの研究を経て、2019年より現職。博士(工学)。Society産業委員、日本オペレーションズリサーチ学会会員、経営情報学会会員、日本経営工学会会員。</div>
                     </div>
                 </div>
             </section>
@@ -226,8 +245,11 @@
                                 <i class="envelope icon"></i>
                                 サービス工学シンポジウム実行委員会
                             </a>
-                            <div class="item" id="tsukuba-footer"><img src="img/tsukuba_footer.png" width="65%"></div>
                         </div>
+                    </div>
+                    <div class="ui center aligned text container" style="margin-top: 20px;">
+                        <a href="https://www.tsukuba.ac.jp/" target="_blank"><img src="img/tsukuba_footer.png" class="ui centered small image"></a>
+                        <small class="copyright">@2020 筑波大学大学院 システム情報工学研究科 社会工学専攻 all rights reserved.</small>
                     </div>
                 </div>
             </div>

@@ -23,8 +23,33 @@ section h2 {
     background: url('../img/topBar.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: repeat; */
     height: 500px;
+    position: relative;
+    /* /width: 1400px; */
+}
+.page-title{
+    text-align: left;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    position: absolute;
+    top: 33%;
+    left: 0%;
+    font-size: 42px;
+    color: white;
+    line-height: 55px;
+    background: linear-gradient(transparent 25%, rgba(163,51,200,0.9) 25%);
+    padding: 0 1em 0.8em 0.8em;
+}
+.event-time {
+    text-align: left;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    position: absolute;
+    bottom: 10%;
+    right: 0%;
+    left: 70%;
+    color: white;
+    background: linear-gradient(transparent 25%, rgba(163,51,200,0.9) 25%);
+    padding: 0 1em 0.8em 1em;
 }
 
 /* about */
@@ -46,7 +71,7 @@ td.center.aligned{
 
 /* guest speakers */
 .guests {
-    background-image: url('../img/tsukuba.jpeg');
+    background-image: url('../img/tsukuba_square.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,14 +83,13 @@ td.center.aligned{
 
 /* footer */
 .footer {
-    padding: 5em 0;
+    padding: 5em 0 2em;
     background-color: #DEF0EA;
 }
 .ui.facebook.button {
     margin: 0 40px;
-    width: 35%;
 }
-#tsukuba-footer {
-    margin-top: 10px;
-    text-align: center;
+.copyright {
+    margin-top: 30px;
+    color: #676767;
 }
