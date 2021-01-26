@@ -95,53 +95,55 @@
             <div class="head">
                 <div class="ui container">
                     <h2>Presentation slide</h2>
-                    <div class="grade">
-                        <div class="ui purple two item menu">
-                            <div class="active item">
-                                <div class="ui pointing dropdown ">
-                                    <div class="text"><a href="#" style="color:purple;">Student</a></div>
-                                    <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <a href="#M1" class="item">M1</a>
-                                        <a href="#M2" class="item">M2</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="ui pointing dropdown ">
-                                    <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
-                                    <i class="dropdown icon"></i>
-                                    <div class="menu">
-                                        <a href="project.html#labolatory" class="item">Laboratory</a>
-                                        <a href="project.html#placemaking" class="item">Class</a>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
+                    <div class="seg-content">
+                        <div class="ui raised segment" style="width:60%;margin:0 auto;">
+                            <a class="ui red ribbon label">Overview</a>  
+                            <p></p>                          
+                            <p>M1は研究計画だよ</p>
+                            <p>M2は修士研究の成果を発表するンゴ</p>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="ui column centered grid seg-content"  style="margin-top:1em;">
-                        <div class="ui column center aligned" style="width:500px;">
-                        <div class="ui raised segment">
-                            <div class="search-area">
-                            <h4 class="seg-title">研究分野</h4>
-                                <form method="get" action="">
-                                  <select name="研究分野" class="ui dropdown" id="field">
-                                      <option value="">研究分野を選んでください</option>
-                                      <option value="需要予測">需要予測</option>
-                                      <option value="network">network</option>
-                                      <option value="データ解析">データ解析</option>
-                                      <option value="テキストマイニング">テキストマイニング</option>
-                                      <option value="都市計画">都市計画</option>
-                                  </select>
-                                    <input type="button" value="絞り込む" id="button" class="ui violet button">
-                                    <input type="button" value="全て表示" id="button2" class="ui purple button">
-                                </form>
+            <div class="grade">
+                <div class="ui menu grid">
+                    <div class="active item three wide right aligned column">
+                        <div class="ui pointing dropdown" style="margin:0 auto;">
+                            <div class="text"><a href="#" style="color:purple;">Student</a></div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a href="#M1" class="item">M1</a>
+                                <a href="#M2" class="item">M2</a>
                             </div>
                         </div>
                     </div>
+                    <div class="item three wide grid right aligned column">
+                        <div class="ui pointing dropdown" style="margin:0 auto;">
+                            <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a href="project.html#labolatory" class="item">Laboratory</a>
+                                <a href="project.html#placemaking" class="item">Class</a>
+                            </div>
+                        </div>
                     </div>
-                    
+                    <div class="item ten wide right aligned column">
+                        <div class="search-area" style="margin:0 auto;">
+                            <form method="get" action="">
+                                <select name="研究分野" class="ui dropdown" id="field" style="margin-right:1em;">
+                                    <option value="">研究分野を選んでください</option>
+                                    <option value="需要予測">需要予測</option>
+                                    <option value="network">network</option>
+                                    <option value="データ解析">データ解析</option>
+                                    <option value="テキストマイニング">テキストマイニング</option>
+                                    <option value="都市計画">都市計画</option>
+                                </select>
+                                <input type="button" value="絞り込む" id="button" class="ui mini purple button">
+                                <input type="button" value="全て表示" id="button2" class="ui mini purple button">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 

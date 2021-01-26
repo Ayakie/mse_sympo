@@ -6,15 +6,15 @@ a.anchor {
 }
 
 .main{
-  background-color:#def0e7;
+  
 }
 
 .head{
-  padding-top: 2em;
+  padding: 2em 0;
+  background-color:#def0e7;
 }
 
 .head h2{
-  padding-top:90px;
   margin-bottom: 0px;
   font-family: 'Permanent Marker';
   font-size: 46px;
@@ -25,9 +25,8 @@ a.anchor {
 
 /* ------------------　切り替えボタン　------------------ */
 .grade{
-  width:300px;
-  margin-left: auto;
-  margin-right: auto;
+  width:60%;
+  margin:2em auto 0 auto;
 }
 /* ------------------　切り替えボタン　------------------ */
 
