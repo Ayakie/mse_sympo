@@ -11,7 +11,7 @@ a.anchor {
 }
 
 .head h2{
-  margin-bottom: 0px;
+  margin: 90px auto 0 auto;
   font-family: 'Permanent Marker';
   font-size: 46px;
   text-align: center;
@@ -21,8 +21,9 @@ a.anchor {
 
 /* ------------------　切り替えボタン　------------------ */
 .grade{
-  width:60%;
-  margin:2em auto 2em auto;
+  width:80%;
+  padding-top:2em;
+  margin:0 auto 1em auto;
 }
 /* ------------------　切り替えボタン　------------------ */
 
@@ -32,16 +33,18 @@ https://shibajuku.net/card-component-markup/
 https://sato-you.com/side_by_side_cards/
 */
 
+/* 資料の背景 */
+.content{
+  background-color:white;
+}
+
 .materials{
-  /* background-color:#DEF0EA; */
-  padding:1em auto;
-  margin-bottom:1em;
+  margin:2em auto;
 }
 .materials h2{
   font-family: 'Permanent Marker';
   font-size: 40px;
   text-align: center;
-  padding-bottom: 0.5em;
   letter-spacing: 0.1em;
 }
 
@@ -52,6 +55,9 @@ https://sato-you.com/side_by_side_cards/
   text-align: center;
   padding-bottom: 0.5em;
   letter-spacing: 0.1em;
+}
+.placemaking{
+  padding-bottom:2em;
 }
 
 .seg-content{
@@ -94,7 +100,9 @@ https://sato-you.com/side_by_side_cards/
 
 /* ------------------　投票ボタン　------------------ */
 .voting{
-  margin-top:1em;
+  margin:2em auto 0 auto;
+  padding-bottom:2em;
+
 }
 
 /* ------------------　pagetop　------------------ */

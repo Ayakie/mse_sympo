@@ -97,21 +97,23 @@
                     <h2>Presentation slide</h2>
                     <div class="ui grid seg-content">
                         <div class="column">
-                            <div class="ui raised segment" style="width:50%;margin:0 auto;">
-                                <a class="ui red ribbon label">M1</a>
-                                <span>これから取り組む・これまでに取り組んだ産官学連携研究について、その計画や成果について発表します</span>
+                            <div class="ui raised segment" style="width:70%;margin:0 auto;">
+                                <a class="ui red ribbon label" style="margin-left:0;">M1</a>
+                                <span>これから取り組む・これまでに取り組んだ産官学連携研究について、その計画や成果について発表します　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</span>
                                 <p></p>
-                                <a class="ui blue ribbon label">M2</a>
-                                <span>修士の間に行った産官学連携研究の成果について発表します</span>
+                                <a class="ui blue ribbon label" style="margin-left:0;">M2</a>
+                                <span>修士の間に行った産官学連携研究の成果について発表します　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</span>
+                                <p></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="content">
             <div class="grade">
                 <div class="ui stackable menu grid">
-                    <div class="active item three wide right aligned column">
+                    <div class="active item three wide column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
                             <div class="text"><a href="#" style="color:purple;">Student</a></div>
                             <i class="dropdown icon"></i>
@@ -121,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item three wide grid right aligned column">
+                    <div class="item three wide grid column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
                             <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
                             <i class="dropdown icon"></i>
@@ -131,10 +133,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item ten wide right aligned column">
+                    <div class="item ten wide column">
                         <div class="search-area" style="margin:0 auto;">
-                            <form method="get" action="">
-                                <select name="研究分野" class="ui dropdown" id="field" style="margin-right:1em;width:50%;">
+                            <form method="get" action="" style="display:inline-block;">
+                                <select name="研究分野" class="ui dropdown" id="field" style="margin:0.5em;width:50%;">
                                     <option value="">研究分野を選んでください</option>
                                     <option value="需要予測">需要予測</option>
                                     <option value="network">network</option>
@@ -142,8 +144,10 @@
                                     <option value="テキストマイニング">テキストマイニング</option>
                                     <option value="都市計画">都市計画</option>
                                 </select>
-                                <input type="button" value="絞り込む" id="button" class="ui mini purple button">
-                                <input type="button" value="全て表示" id="button2" class="ui mini purple button">
+                                <div style="display:inline-block;">
+                                    <input type="button" value="絞り込む" id="button" class="ui mini purple button">
+                                    <input type="button" value="全て表示" id="button2" class="ui mini purple button">
+                                </div> 
                             </form>
                         </div>
                     </div>
@@ -514,8 +518,8 @@
                                 <div class="ui two column grid">
                                     <div class="column">
                                             <div class="ui tag labels">
-                                                <p><a class="ui tag label" style="width:100%;text-align:center;">需要予測</a></p>
                                                 <p><a class="ui teal tag label" style="width:100%;text-align:center;">テキストマイニング</a></p>
+                                                <p>　</p>
                                             </div>
                                     </div>
                                     <div class="column">
@@ -562,12 +566,17 @@
 
                     </div> <!-- /card-container -->
                 </div> <!-- /card-inner -->
-                <div class="voting">
-                    <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
-                    <i class="archive icon"></i>投票はこちらから
-                    </button>
-                </div>
             </div> <!-- /materials -->
+
+            <div class="voting">
+                <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
+                <i class="archive icon"></i>投票はこちらから
+                </button>
+            </div>
+
+            </div> <!-- /content -->
+
+            
 
             <div id="page_top"><a href="#"></a></div>
             <!-- footer -->
