@@ -22,7 +22,7 @@ a.anchor {
 /* ------------------　切り替えボタン　------------------ */
 .grade{
   width:60%;
-  margin:2em auto 0 auto;
+  margin:2em auto 2em auto;
 }
 /* ------------------　切り替えボタン　------------------ */
 
@@ -35,10 +35,17 @@ https://sato-you.com/side_by_side_cards/
 .materials{
   /* background-color:#DEF0EA; */
   padding:1em auto;
+  margin-bottom:1em;
+}
+.materials h2{
+  font-family: 'Permanent Marker';
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.1em;
 }
 
 .materials h3{
-  padding-top:30px;
   margin-bottom: 10px;
   font-family: 'Permanent Marker';
   font-size: 30px;
@@ -87,8 +94,7 @@ https://sato-you.com/side_by_side_cards/
 
 /* ------------------　投票ボタン　------------------ */
 .voting{
-  margin-top:2em;
-  padding-bottom:1em;
+  margin-top:1em;
 }
 
 /* ------------------　pagetop　------------------ */
