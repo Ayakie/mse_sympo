@@ -28,7 +28,8 @@ section h2 {
     position: relative;
     /* /width: 1400px; */
 }
-.page-title{
+#page-title{
+    display: none;
     text-align: left;
     font-family: 'Sawarabi Mincho', sans-serif;
     position: absolute;
@@ -40,7 +41,8 @@ section h2 {
     background: linear-gradient(transparent 25%, rgba(163,51,200,0.9) 25%);
     padding: 0 1em 0.8em 0.8em;
 }
-.event-time {
+#event-time {
+    display: none;
     text-align: left;
     font-family: 'Sawarabi Mincho', sans-serif;
     position: absolute;
@@ -58,6 +60,7 @@ section h2 {
 }
 .about img {
     width: 270px;
+    margin: 0 auto;
 }
 
 /* schedule */
