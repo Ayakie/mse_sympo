@@ -1,0 +1,34 @@
+<?php
+class Card{
+    private $title;
+    private $name;
+    private $time1;
+    private $time2;
+    private $tag1;
+    private $tag2;
+    private $embeddedLink;
+    private static $slideNumber = 0;
+    
+    public function __construct($row) {
+        $this -> title = $row[0];
+        $this -> name = $row[2];
+        $this -> time1 = $row[3];
+        $this -> time2 = $row[4];
+        $this -> tag1 = $row[5];
+        $this -> tag2 = $row[6];
+        $this -> embeddedLink = $row[7];
+        self::$slideNumber++;
+    }
+
+    // プライベートプロパティを取得(ゲッター)
+    public function getTitle() {return $this -> title;}
+    public function getName() {return $this -> name;}
+    public function getTime1() {return $this -> time1;}
+    public function getTime2() {return $this -> time2;}
+    public function getTag1() {return $this -> tag1;}
+    public function getTag2() {return $this -> tag2;}
+    public function getEmbeddedLink() {return $this -> embeddedLink;}
+    public static function getSlideNumber() {return self::$slideNumber;}
+}
+
+?>

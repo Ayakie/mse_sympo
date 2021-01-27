@@ -71,6 +71,22 @@ https://sato-you.com/side_by_side_cards/
   /* 適用されないんだけど */
   width:400px;
 }
+.column.youtube-icon {
+  position: relative;
+}
+.youtube.button.right.floated {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.column.student-name {
+  padding-right: 22px;
+  text-align: right;
+  letter-spacing: 1.2px;
+}
+.column.time {
+  letter-spacing: 1.1px;
+}
 
 .g-slide{
   position: relative;
