@@ -24,22 +24,32 @@
                 $('.ui.dropdown').dropdown({
                     on: 'hover'
                 });
-                $('.ui.purple.card').popup({
+                $('.card').popup({
                     inline: true,
                     position: 'bottom center'
                 });
                 $('.dimmable.image').dimmer({
                     on: 'hover'
                 });
+                // タイトルアニメーション
+                // 右からの遷移の場合、親要素のwidthが崩れる
+                var showTime = function() {
+                    $('#event-time').transition('fly right');
+                };
+                $('#page-title').transition({
+                    animation: 'fly right',
+                    duration: 800,
+                    onComplete: showTime
+                });
               })
             ;
-            // タイトルアニメーション
-            $(function() {
-                var showTime = function() {
-                    $('#event-time').show('slide', {direction: 'right'}, 500);
-                };
-                $('#page-title').show('slide', '', 800, showTime);
-            });
+            // jQuery-UI を用いる方法
+            // $(function() {
+            //     var showTime = function() {
+            //         $('#event-time').show('slide', '', 500);
+            //     };
+            //     $('#page-title').show('slide', '', 800, showTime);
+            // });
 
             // スムーススクロール
             $(function() {
@@ -75,8 +85,8 @@
                                         <i class="caret left icon"></i>
                                         ポスターセッション
                                         <div class="menu">
-                                            <a href="presentation/student.php" class="item">学生発表 | Student</a>
-                                            <a href="presentation/project.html" class="item">プロジェクト | Project</a>
+                                            <a href="presentation/student.php" class="item">学生発表（M1・M2）</a>
+                                            <a href="presentation/project.html" class="item">プロジェクト（Laboratory・Class)</a>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +102,7 @@
                 </div>
 
                 <h1 id="page-title">第７回 <span style="letter-spacing: 7px;">筑波大学</span><br>サービス工学シンポジウム</h1>
-                <h1 id="event-time"><span style="letter-spacing: 1.1px;">2020.02.12(Fri)</span><br>13:00 〜 18:00 @online</h1>
+                <h1 id="event-time">2021.02.12(Fri)<br>13:00 〜 18:30 <span style="letter-spacing: 2.2px;">@online</span></h1>
 
             </div>
 
@@ -121,7 +131,7 @@
                                             <a class="ui inverted purple button" href="#guest-speakers">More</a>
                                         </div>
                                     </div>
-                                    <img class="ui rounded image" src="img/ubie_abe.jpg">
+                                    <img class="ui rounded image" src="img/about_guest.png">
                                 </div>
                             </div>
                             <div class="column">
@@ -131,7 +141,7 @@
                                             <a class="ui inverted purple button" href="#">More</a>
                                         </div>
                                     </div>
-                                    <img class="ui rounded image" src="img/dummy.png">
+                                    <img class="ui rounded image" src="img/casebank_image.jpg">
                                 </div>
                             </div>
                         </div>
@@ -229,7 +239,7 @@
                                 <div class="description">Ubie株式会社 共同代表取締役医師</div>
                             </div>
                         </div>
-                        <div class="ui popup">2015年東京大学医学部医学科卒業後、東京大学医学部附属病院、東京都健康長寿医療センターで初期研修を修了。2017年5月にUbie株式会社を共同創業、全国の病院向けにAIを用いた問診システム(AI問診Ubie)の提供を始める。第３回日本サービス大賞厚生労働大臣賞受賞。2020年 Forbes 30 Under Asia Healthcare & Science 部門選出。</div>
+                        <div class="ui popup">2015年東京大学医学部医学科卒業後、東京大学医学部附属病院、東京都健康長寿医療センターで初期研修を修了。2017年5月にUbie株式会社を共同創業、全国の病院向けにAIを用いた問診システム（AI問診Ubie）の提供を始める。第３回日本サービス大賞厚生労働大臣賞受賞。2020年 Forbes 30 Under Asia Healthcare & Science 部門選出。</div>
                         <div class="ui purple card">
                             <div class="guest image"><img src="img/funaki.jpg"></div>
                             <div class="content">
@@ -237,7 +247,7 @@
                                 <div class="description">日立製作所 コーポレートベンチャリング室</div>
                             </div>
                         </div>
-                        <div class="ui popup">早稲田大学大学院修士課程修了（理工学研究科工業経営専門分野）後、日立製作所入社。工場設計、生産システム、サプライチェーンマネジメントシステム、サービスデザインの研究を経て、2019年より現職。博士(工学)。Society産業委員、日本オペレーションズリサーチ学会会員、経営情報学会会員、日本経営工学会会員。</div>
+                        <div class="ui popup">早稲田大学大学院修士課程修了（理工学研究科工業経営専門分野）後、日立製作所入社。工場設計、生産システム、サプライチェーンマネジメントシステム、サービスデザインの研究を経て、オープンイノベーション戦略の策定、実行に従事。2019年より現職。博士（工学）。INFORMS（The Institute for Operations Research and the Management Sciences）会員、IEOM（Industrial Engineering and Operations Management）Society産業委員、日本オペレーションズリサーチ学会会員、経営情報学会会員、日本経営工学会会員。</div>
                     </div>
                 </div>
             </section>
