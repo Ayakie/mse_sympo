@@ -83,7 +83,7 @@ require_once('card.php');
                                 <div class="menu">
                                     <a href="#" class="ui dropdown item">Student
                                     </a>
-                                    <a href="project.html" class="item">Project</a>
+                                    <a href="Project.html" class="item">Project</a>
                                 </div>
                             </div>
                             <div class="ui dropdown purple item"><i class="inverted graduation cap icon"></i>Link
@@ -134,8 +134,8 @@ require_once('card.php');
                             <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <a href="project.html#labolatory" class="item">Laboratory</a>
-                                <a href="project.html#placemaking" class="item">Class</a>
+                                <a href="Project.html#labolatory" class="item">Laboratory</a>
+                                <a href="Project.html#placemaking" class="item">Class</a>
                             </div>
                         </div>
                     </div>
