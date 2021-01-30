@@ -29,6 +29,7 @@ require_once('card.php');
                 $('.ui.dropdown').dropdown({
                   on: 'hover'
                 });
+                $('.ui.checkbox').checkbox();
               })
             ;
 
@@ -43,7 +44,8 @@ require_once('card.php');
                 return false;
             });
             });
-
+            
+            // タグ絞り込み
             $(function(){
                 $("#button").bind("click",function(){
 
@@ -65,6 +67,16 @@ require_once('card.php');
                     $(".cards .card").show();
                 });
             });
+
+            // コメントモーダル
+            $(function() {
+                $('.comment.icon.button').click(function() {
+                    $('.ui.modal')
+                    .modal('setting', 'closable', false)
+                    .modal('show');
+                });
+            })
+
         </script>
 
     </head>
@@ -110,12 +122,14 @@ require_once('card.php');
                                 <a class="ui blue ribbon label">M2</a>
                                 <span>修士の間に行った産官学連携研究の成果について発表します</span>
                                 <p></p>
+                                <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- メニュー -->
             <div class="content">
             <div class="grade">
                 <div class="ui stackable menu grid">
@@ -165,6 +179,61 @@ require_once('card.php');
                 </div>
             </div>
 
+        <!-- comment modal -->
+        <?php date_default_timezone_set ('Asia/Tokyo'); ?>
+        <div class="ui small modal">
+            <?php
+                // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
+                if (true):
+            ?>
+                <i class="close icon"></i>
+                <div class="header">
+                    ここはスライド番号とタイトルを変数で組み込みたい
+                </div>
+                <div class="content">
+                    <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
+                    <form class="ui form" method="POST" action="comment.php">
+                        <div class="required field">
+                            <label>1. お名前（必須）</label>
+                            <input type="text" name="name" placeholder="社工 花子" required>
+                        </div>
+                        <div class="field">
+                            <label>2. メールアドレス（返事を希望の場合）</label>
+                            <input type="email" name="email" placeholder="aaabbb@gmail.com">
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" tabindex="0" class="hidden" name="need-reply" value="yes">
+                                <label>返信を希望する</label>
+                            </div>
+                        </div>
+                        <div class="required field">
+                            <label>3. 発表内容へのコメントまたは質問（必須）</label>
+                            <textarea name="comment" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" minlength="10" required></textarea>
+                        </div>
+                        <div class="actions">
+                            <div class="ui cancel button">
+                                キャンセル
+                            </div>
+                            <button class="ui positive comment-submit button" type="submit">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            <?php else: ?>
+                <div class="image content">
+                    <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
+                    <div class="description">
+                        <h2>Sorry...</h2>
+                        <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="ui cancel button">戻る</div>
+                </div>
+            <?php endif; ?>
+        </div>
+                
+            <!-- M1 スライドセクション -->
             <a id="M1" class="anchor"></a>
             <div class="M1 materials">
                 <h3>M1</h3>
@@ -188,11 +257,11 @@ require_once('card.php');
                                     <div class="ui two column grid">
                                         <div class="column">
                                                 <div class="ui tag labels" style="margin-left: 0em;">
-                                                    <p><a class="ui tag label" style="width:100%;text-align:center;"><?php echo $studentData -> getTag1() ?></a></p>
+                                                    <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
                                                     <?php
                                                     $tag2 = $studentData->getTag2();
                                                     if($tag2 != null) {
-                                                        echo "<p><a class='ui teal tag label' style='width:100%;text-align:center;'>{$tag2}</a></p>";
+                                                        echo "<p><a class='ui tag label'>{$tag2}</a></p>";
                                                     } else {
                                                         echo "<br>";
                                                     }
@@ -200,19 +269,23 @@ require_once('card.php');
                                                 </div>
                                         </div>
                                         <div class="column youtube-icon">
-                                            <button class="ui youtube button right floated" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')" style="vertical-align: bottom;">
-                                            <i class="youtube icon"></i>YouTube
-                                            </button>
+                                            <div class="ui comment icon button" data-tooltip='コメントする' data-variation="tiny">
+                                                <i class="ui comment alternate icon"></i>
+                                            </div>
+                                            <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
+                                                <i class="youtube icon"></i>YouTube
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach ?>
 
-                    </div> <!-- /card-container -->
-                </div> <!-- /card-inner -->
-            </div> <!-- /materials -->
+                    </div>
+                </div>
+            </div>
 
+            <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
             <div class="M2 materials">
                 <h3>M2</h3>
@@ -236,11 +309,11 @@ require_once('card.php');
                                     <div class="ui two column grid">
                                         <div class="column">
                                                 <div class="ui tag labels" style="margin-left: 0em;">
-                                                    <p><a class="ui tag label" style="width:100%;text-align:center;"><?php echo $studentData -> getTag1() ?></a></p>
+                                                    <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
                                                     <?php
                                                     $tag2 = $studentData->getTag2();
                                                     if($tag2 != null) {
-                                                        echo "<p><a class='ui teal tag label' style='width:100%;text-align:center;'>{$tag2}</a></p>";
+                                                        echo "<p><a class='ui tag label'>{$tag2}</a></p>";
                                                     } else {
                                                         echo "<br>";
                                                     }
@@ -260,7 +333,7 @@ require_once('card.php');
                 </div> <!-- /card-inner -->
             </div> <!-- /materials -->
 
-            <div class="voting">
+            <div class="voting" id="voting-button">
                 <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
                 <i class="archive icon"></i>投票はこちらから
                 </button>
