@@ -239,9 +239,38 @@ require_once('card.php');
                 <h3>M1</h3>
                 <div class="container">
                     <div class="ui cards centered" id="cards">
+                        <!-- card example -->
+                        <div class="slide card" style="width: 400px;">
+                            <img src="../img/slide_example.png">
+                            <div class="content">
+                                <div class="header" style="margin-top: 40px;">(スライド番号).研究タイトル</div>
+                                <div class="ui grid">
+                                    <div class="ten wide column time">
+                                        <div>①発表時間１(Remoテーブル)</div>
+                                        <div>②発表時間２(Remoテーブル)</div>
+                                        <div>メニューのTime Tableをご確認ください</div>
+                                    </div>
+                                    <div class="six wide column student-name">発表者名</div>
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <div class="ui two column grid">
+                                    <div class="column">
+                                        <div class="ui tag labels">
+                                            <p><a class="ui tag label">研究分野①</a></p>
+                                            <p><a class="ui tag label">研究分野②</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="column youtube-icon">
+                                        <div class="ui icon button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div>
+                                        <a class="ui youtube button right floated"><i class="youtube icon"></i>発表動画</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- card-item -->
                         <?php foreach ($rows as $row): $studentData = new Card($row)?>
-                            <div class="card" style="width:400px;" id="card">
+                            <div class="slide card" style="width:400px;" id="card">
                                 <?php echo $studentData -> getEmbeddedLink() ?>
                                 <div class="content" style="padding-bottom: 0.6em;">
                                     <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>

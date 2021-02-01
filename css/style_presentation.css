@@ -67,9 +67,19 @@ https://sato-you.com/side_by_side_cards/
   font-size:20px;
 }
 
-.card{
-  /* 適用されないんだけど */
+/* カードのスタイルは適用されない */
+.slide.card{
   width:400px;
+}
+
+.slide.card .content {
+  padding-bottom: 0.6em;
+}
+.slide.card .header {
+  padding-bottom: 1rem;
+}
+.ui.tag.labels {
+  margin-left: 0em;
 }
 .column.youtube-icon {
   position: relative;
@@ -109,7 +119,6 @@ https://sato-you.com/side_by_side_cards/
   margin-top:auto;
 }
 
-/* ------------------　資料達　------------------ */
 .materials .ui.raised.segment {
   margin-bottom: 40px;
 }
