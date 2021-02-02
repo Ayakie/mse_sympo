@@ -130,15 +130,16 @@ require_once('card.php');
                                 <a class="ui blue ribbon label">修士２年（M2）</a>
                                 <span>修士の間に行った産官学連携研究の成果について発表します</span>
                                 <p></p>
-                                <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div>
+                                <!-- <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- メニュー -->
             <div class="content">
+
+            <!-- メニュー -->
             <div class="grade">
                 <div class="ui stackable menu grid" style="font-size: 16px;">
                     <div class="active item two wide column">
@@ -190,7 +191,12 @@ require_once('card.php');
             <!-- M1 スライドセクション -->
             <a id="M1" class="anchor"></a>
             <div class="M1 materials">
-                <h3>M 1</h3>
+                <div class="ui two column centered grid">
+                    <div class="four column centered row">
+                        <div class="column"><h3 style="text-align: right;">M 1</h3></div>
+                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://docs.google.com/forms/d/1M_dJiEUfQcOdDzkPbFlcpnfEaXhAS3U_KDBAPmRzEGY/edit?usp=sharing','_blank')"><i class="archive icon"></i> 投票（M1）</a></div>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="ui cards centered" id="cards">
                         <!-- card example -->
@@ -272,7 +278,12 @@ require_once('card.php');
             <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
             <div class="M2 materials">
-                <h3>M 2</h3>
+                <div class="ui two column centered grid">
+                    <div class="four column centered row">
+                        <div class="column"><h3 style="text-align: right;">M 2</h3></div>
+                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://docs.google.com/forms/d/1wUZuXqFTd7_GmrD95Ay3u07AFKjEv-3fwcfm-RXslD0/edit?usp=sharing','_blank')"><i class="archive icon"></i> 投票（M2）</a></div>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="ui cards centered">
                         
@@ -397,13 +408,13 @@ require_once('card.php');
                 <?php endif; ?>
             </div>
             
-            <div class="voting" id="voting-button">
+            <!-- <div class="voting" id="voting-button">
                 <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
                 <i class="archive icon"></i>投票はこちらから
                 </button>
-            </div>
+            </div> -->
 
-            </div> <!-- /content -->
+            </div> <!-- /content 終わり-->
 
             <div id="page_top"><a href="#"></a></div>
             
