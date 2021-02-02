@@ -199,11 +199,6 @@ require_once('card.php');
                                         echo "<option value={$tag}>{$tag}</option>";
                                     };
                                     ?>
-                                    <!-- <option value="需要予測">需要予測</option>
-                                    <option value="network">network</option>
-                                    <option value="データ解析">データ解析</option>
-                                    <option value="テキストマイニング">テキストマイニング</option>
-                                    <option value="都市計画">都市計画</option> -->
                                 </select>
                                 <div style="display:inline-block;">
                                     <input type="button" value="絞り込む" id="button" class="ui mini purple button" style="margin:0.5em;">
@@ -244,16 +239,13 @@ require_once('card.php');
                                         </div>
                                     </div>
                                     <div class="column youtube-icon">
-                                        <form action="student.php" method="POST">
-                                            <div class="ui comment icon button" data-tooltip="コメントする" data-variation="tiny" name='getId'><i class="ui comment alternate icon"></i></div>
-                                        </form>
-                                        <!-- <div class="ui icon comment button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div> -->
-                                        <a class="ui youtube button right floated"><i class="youtube icon"></i>発表動画</a>
+                                        <div class="ui icon button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div>
+                                        <a class="ui red basic button right floated" style="top: 14px;"><i class="youtube icon"></i>発表動画</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- card-item -->
                         <?php foreach ($m1 as $row): $studentData = new Card($row)?>
                         <div class="slide card" style="width:400px;" id="card">
@@ -289,92 +281,16 @@ require_once('card.php');
                                         echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                    <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
+                                    <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui red basic button right floated">
                                     <i class="youtube icon"></i>YouTube</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <?php endforeach ?>
-                        
                     </div>
                 </div>
             </div>
-            
-                    <!-- comment modal -->
-                    <?php date_default_timezone_set ('Asia/Tokyo'); ?>
-                    <div class="ui small modal">
-                        <?php
-                            // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
-                            if (true):
-                        ?>
-                            <i class="close icon"></i>
-                            <div class="header">
-                                コメント入力フォーム
-                            </div>
-                            <div class="content">
-                                <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
-                                <!--  " -->
-                                <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
-                                    <p>
-                                        <div class="required field">
-                                            <label>1. お名前（必須）</label>
-                                            <input class="required-form" type="text" name="entry.1993511996" placeholder="社工 花子" id="name">
-                                        </div>
-                                    </p>
-                                    <div class="field">
-                                        <label>2. メールアドレス（返事を希望の場合）</label>
-                                        <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
-                                    </div>
-                                    <div class="field">
-                                        <div class="ui checkbox">
-                                            <input type="checkbox" tabindex="0" class="hidden" name="entry.846302703" value="yes">
-                                            <label>返信を希望する</label>
-                                        </div>
-                                    </div>
-                                    <div class="required field">
-                                        <label>3.スライド番号および発表者名（必須）</label>
-                                        <select name="entry.1978908169" class="ui fluid dropdown" id="slideNumber">
-                                            <option value="">コメントするスライド</option>
-                                            <?php
-                                            $memberList = $studentData -> getMemberList();
-                                            $cnt = count($memberList) -1;
-                                            echo $memberList[0];
-                                            for ($i=0; $i<=$cnt; $i++) {
-                                                // $value = $i+1;
-                                                echo "<option value={$memberList[$i]}>".$memberList[$i]."</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="required field">
-                                        <label>4. 発表内容へのコメントまたは質問（必須）</label>
-                                        <textarea name="entry.825151473" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" id="comment"></textarea>
-                                    </div>
-                                    <div class="ui error message"></div>
-                                    <div class="actions">
-                                        <div class="ui cancel button">
-                                            キャンセル
-                                        </div>
-                                        <button class="ui comment-submit button" type="submit">送信する</button>
-                                    </div>
-                                </form>
-                                <script type="text/javascript">submitted = false;</script>
-                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='comment.php';}"></iframe>
-                            </div>
-                        <?php else: ?>
-                            <div class="image content">
-                                <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
-                                <div class="description">
-                                    <h2>Sorry...</h2>
-                                    <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="ui cancel button">戻る</div>
-                            </div>
-                        <?php endif; ?>
-                    </div>
             
             <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
@@ -382,10 +298,10 @@ require_once('card.php');
                 <h3>M2</h3>
                 <div class="container">
                     <div class="ui cards centered">
-
+                        
                         <!-- card-item -->
                         <?php foreach ($m2 as $row): $studentData = new Card($row)?>
-                        <div class="card" style="width:400px;" id="card">
+                        <div class="slide card" style="width:400px;" id="card">
                             <?php echo $studentData -> getEmbeddedLink() ?>
                             <div class="content" style="padding-bottom: 0.6em;">
                                 <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>
@@ -393,7 +309,6 @@ require_once('card.php');
                                     <div class="column time">
                                         <div><?php echo "①".$studentData -> getTime1() ?></div>
                                         <div><?php echo "②".$studentData -> getTime2() ?></div>
-                                        
                                     </div>
                                     <div class="column student-name"><?php echo $studentData -> getName() ?></div>
                                 </div>
@@ -402,36 +317,109 @@ require_once('card.php');
                                 <div class="ui two column grid">
                                     <div class="column">
                                         <div class="ui tag labels" style="margin-left: 0em;">
-                                            <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
                                             <?php
-                                                    $tag2 = $studentData->getTag2();
-                                                    if($tag2 != null) {
-                                                        echo "<p><a class='ui tag label'>{$tag2}</a></p>";
-                                                    } else {
-                                                        echo "<br>";
-                                                    }
-                                                    ?>
-                                                </div>
-                                            </div>
-                                            <div class="column youtube-icon">
-                                                
-                                                <?php
-                                            echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                            $tag1 = $studentData->getTag1();
+                                            echo "<p><a class='ui tag label {$studentData->getTagColor($tag1, $tagList, $colorsDict)}'>{$tag1}</a></p>";
+                                            $tag2 = $studentData->getTag2();
+                                            if($tag2 != null) {
+                                                echo "<p><a class='ui tag label {$studentData->getTagColor($tag2, $tagList, $colorsDict)}'>{$tag2}</a></p>";
+                                            } else {
+                                                echo "<br>";
+                                            }
                                             ?>
-                                                <i class="ui comment alternate icon"></i>
-                                            </div>
-                                            <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
-                                            <i class="youtube icon"></i>YouTube
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="column youtube-icon">
+                                        <?php
+                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                        ?>
+                                        <i class="ui comment alternate icon"></i></div>
+                                        <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui red basic button right floated">
+                                        <i class="youtube icon"></i>YouTube</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <?php endforeach ?>
-                    </div> <!-- /card-container -->
-                </div> <!-- /card-inner -->
-            </div> <!-- /materials -->
-
+                    </div>
+                </div>
+            </div>
+            
+            <!-- comment modal -->
+            <?php date_default_timezone_set ('Asia/Tokyo'); ?>
+            <div class="ui small modal">
+                <?php
+                    // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
+                    if (true):
+                ?>
+                    <i class="close icon"></i>
+                    <div class="header">
+                        コメント入力フォーム
+                    </div>
+                    <div class="content">
+                        <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
+                        <!--  " -->
+                        <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
+                            <p>
+                                <div class="required field">
+                                    <label>1. お名前（必須）</label>
+                                    <input class="required-form" type="text" name="entry.1993511996" placeholder="社工 花子" id="name">
+                                </div>
+                            </p>
+                            <div class="field">
+                                <label>2. メールアドレス（返事を希望の場合）</label>
+                                <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" tabindex="0" class="hidden" name="entry.846302703" value="yes">
+                                    <label>返信を希望する</label>
+                                </div>
+                            </div>
+                            <div class="required field">
+                                <label>3.スライド番号および発表者名（必須）</label>
+                                <select name="entry.1978908169" class="ui fluid dropdown" id="slideNumber">
+                                    <option value="">コメントするスライド</option>
+                                    <?php
+                                    $memberList = $studentData -> getMemberList();
+                                    $cnt = count($memberList) -1;
+                                    echo $memberList[0];
+                                    for ($i=0; $i<=$cnt; $i++) {
+                                        // $value = $i+1;
+                                        echo "<option value={$memberList[$i]}>".$memberList[$i]."</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="required field">
+                                <label>4. 発表内容へのコメントまたは質問（必須）</label>
+                                <textarea name="entry.825151473" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" id="comment"></textarea>
+                            </div>
+                            <div class="ui error message"></div>
+                            <div class="actions">
+                                <div class="ui cancel button">
+                                    キャンセル
+                                </div>
+                                <button class="ui comment-submit button" type="submit">送信する</button>
+                            </div>
+                        </form>
+                        <script type="text/javascript">submitted = false;</script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='comment.php';}"></iframe>
+                    </div>
+                <?php else: ?>
+                    <div class="image content">
+                        <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
+                        <div class="description">
+                            <h2>Sorry...</h2>
+                            <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="ui cancel button">戻る</div>
+                    </div>
+                <?php endif; ?>
+            </div>
+            
             <div class="voting" id="voting-button">
                 <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
                 <i class="archive icon"></i>投票はこちらから
