@@ -39,8 +39,6 @@ class Card{
     public function getTagColor($tag, $tagList, $colorsDict){
         if (in_array($tag, $tagList)) {
             return $colorsDict[$tag];
-        } else {
-            return 'grey';
         };
     }
     // public static function getCommentedName($key) {return self::$memberDict[$key];}

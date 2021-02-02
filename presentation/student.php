@@ -115,31 +115,8 @@ require_once('card.php');
     <body>
         <div class="main">
 
-            <!-- <div class="top-visual"> -->
-                <div class="ui fixed inverted compact labeled icon menu">
-                    <div class="ui container">
-                        <a href="../index.html" class="item" style="padding-top: 27px;">社会工学データサイエンスシンポジウム</a>
-                        <div class="right menu">
-                            <a href="../index.html" class="ui purple item"><i class="inverted home icon"></i>Home</a>
-                            <div class="ui dropdown purple item">
-                                <i class="inverted file alternate icon"></i>Material
-                                <div class="menu">
-                                    <a href="#" class="ui dropdown item">Student
-                                    </a>
-                                    <a href="Project.html" class="item">Project</a>
-                                </div>
-                            </div>
-                            <div class="ui dropdown purple item"><i class="inverted graduation cap icon"></i>Link
-                                <div class="menu">
-                                    <a href="https://www.sk.tsukuba.ac.jp/College/index.php" class="item" target="_blank">つくばの社工</a>
-                                    <a href="https://www.sk.tsukuba.ac.jp/PPS/se/" class="item" target="_blank">サービス工学学位プログラム</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- </div> -->
+            <!-- header -->
+            <?php include('../assets/header.html'); ?>
 
             <div class="head">
                 <div class="ui container">
@@ -429,61 +406,9 @@ require_once('card.php');
             </div> <!-- /content -->
 
             <div id="page_top"><a href="#"></a></div>
+            
             <!-- footer -->
-            <div class="footer">
-                <div class="ui container" style="text-align: left;">
-                    <div class="ui divided equal height grid">
-                        <div class="six wide column">
-                            <h4 class="ui header">主催</h4>
-                                <p class="item">
-                                    <i class="right triangle icon"></i>
-                                    筑波大学大学院 理工情報生命学術院 システム情報工学研究群 社会工学専攻 サービス工学学位プログラム
-                                </p>
-                                <p class="item">
-                                    <i class="right triangle icon"></i>
-                                    筑波大学 理工学群 社会工学類
-                                </p>
-                            <h4 class="header">後援</h4>
-                            <div class="ui list">
-                                <a href="http://ja.serviceology.org/index.html" target="_blank">
-                                    <i class="right triangle icon"></i>
-                                    サービス学会</a>
-                            </div>
-                        </div>
-                        <div class="six wide column">
-                            <h4 class="ui header">関連リンク</h4>
-                            <div class="ui list">
-                                <a href="https://www.sk.tsukuba.ac.jp/College/index.php" target="_blank" class="item">
-                                    <i class="right triangle icon"></i>
-                                    筑波大学 理工学群 社会工学類
-                                </a>
-                                <a href="https://www.sie.tsukuba.ac.jp/" target="_blank" class="item">
-                                    <i class="right triangle icon"></i>
-                                    筑波大学大学院 理工情報生命学術院 システム情報工学研究群
-                                </a>
-                                <ul>
-                                    <li><a href="https://www.sk.tsukuba.ac.jp/PPS/pps/" target="_blank">社会工学学位プログラム</a></li>
-                                    <li><a href="https://www.sk.tsukuba.ac.jp/PPS/se/" target="_blank">サービス工学学位プログラム</a></li>
-                                </ul>
-                                <button class="ui facebook button" onclick="window.open('https://www.facebook.com/tsukuba.pps.jp/', '_blank')">
-                                    <i class="facebook icon"></i>Facebook
-                                </button>
-                            </div>
-                        </div>
-                        <div class="four wide column">
-                            <h4 class="ui header">お問い合わせ</h4>
-                            <p></p>
-                            <div class="ui list">
-                                <a href="https://forms.gle/dqCh7VApzngk5qsP6" target="_blank" class="item">
-                                    <i class="envelope icon"></i>
-                                    サービス工学シンポジウム実行委員会
-                                </a>
-                                <div class="item" id="tsukuba-footer"><img src="../img/tsukuba_footer.png" width="65%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php include('../assets/footer.html'); ?>
         </div>
 
     </body>
