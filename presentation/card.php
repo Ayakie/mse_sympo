@@ -1,4 +1,6 @@
 <?php
+require_once('data.php');
+
 class Card{
     private $title;
     private $name;
@@ -9,7 +11,6 @@ class Card{
     private $embeddedLink;
     private static $slideNumber = 0;
     private static $memberList = array();
-    
     public function __construct($row) {
         $this -> title = $row[0];
         $this -> name = $row[2];
@@ -20,6 +21,7 @@ class Card{
         $this -> embeddedLink = $row[7];
         self::$slideNumber++;
         self::$memberList[] = self::$slideNumber.'. '.$row[2];
+        // self::$tags[] = $row[5];
         // self::$memberDict += array('card'.$this->getSlideNumber() => $this->getSlideNumber().$this->getName());
     }
 
@@ -33,6 +35,14 @@ class Card{
     public function getEmbeddedLink() {return $this -> embeddedLink;}
     public static function getSlideNumber() {return self::$slideNumber;}
     public static function getMemberList() {return self::$memberList;}
+    // public static function getTags() {return self::$tags;}
+    public function getTagColor($tag, $tagList, $colorsDict){
+        if (in_array($tag, $tagList)) {
+            return $colorsDict[$tag];
+        } else {
+            return 'grey';
+        };
+    }
     // public static function getCommentedName($key) {return self::$memberDict[$key];}
 }
 

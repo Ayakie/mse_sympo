@@ -11,9 +11,18 @@ $client->setScopes([//スコープを以下の内容でセット
 $client->setAuthConfig($key);//サービスキーをセット
  
 $sheet = new Google_Service_Sheets($client);//シートを操作するインスタンス
-$sheet_id = '1uLpQRsucLB-NwpbyibzKC5aMYTIsfVhb3iWBxyxyKFU';//対象のスプレッドシートのIDを指定
-$range = 'M1!A2:H10';//取得範囲を指定（dataシートのA1〜B8）
+$sheet_id = '1BFOoBqbJA4i8yOkeiq3t8N9iwH3bnzepUTnERMEwhI4';//対象のスプレッドシートのIDを指定
+$range = 'M1!A2:I23';//取得範囲を指定（dataシートのA1〜B8）
 $response = $sheet->spreadsheets_values->get($sheet_id, $range);
-$rows = $response->getValues();//帰ってきたresponseから値を取得
+$m1 = $response->getValues();//帰ってきたresponseから値を取得
  
-// echo var_dump($rows);
+$range = 'M2!A2:I21';
+$response = $sheet->spreadsheets_values->get($sheet_id, $range);
+$m2 = $response->getValues();
+
+$tagList = ['データ解析', '待ち行列理論', '組織行動', '都市計画', '生産品質管理', 'オペレーション管理', 'ネットワーク科学',
+    '経済物理学','数理最適化', 'シミュレーション', '画像判別', '異常検知', '接客', '会計', '統計的因果推論'];
+
+$colorsDict = array('データ解析'=>'red', '待ち行列理論'=>'orange', '都市計画'=>'yellow',
+    '生産品質管理'=>'olive', 'オペレーション管理'=>'green', 'ネットワーク科学'=>'teal', '数理最適化'=>'blue',
+    'シミュレーション'=>'violet', '経済物理学'=>'pink', '異常検知'=>'brown');

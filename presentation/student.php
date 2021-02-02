@@ -194,11 +194,16 @@ require_once('card.php');
                             <form method="get" action="" style="display:inline-block;">
                                 <select name="研究分野" class="ui dropdown" id="field" style="margin:0.5em;width:50%;">
                                     <option value="">研究分野を選んでください</option>
-                                    <option value="需要予測">需要予測</option>
+                                    <?php
+                                    foreach ($tagList as $tag) {
+                                        echo "<option value={$tag}>{$tag}</option>";
+                                    };
+                                    ?>
+                                    <!-- <option value="需要予測">需要予測</option>
                                     <option value="network">network</option>
                                     <option value="データ解析">データ解析</option>
                                     <option value="テキストマイニング">テキストマイニング</option>
-                                    <option value="都市計画">都市計画</option>
+                                    <option value="都市計画">都市計画</option> -->
                                 </select>
                                 <div style="display:inline-block;">
                                     <input type="button" value="絞り込む" id="button" class="ui mini purple button" style="margin:0.5em;">
@@ -217,7 +222,7 @@ require_once('card.php');
                 <div class="container">
                     <div class="ui cards centered" id="cards">
                         <!-- card example -->
-                        <div class="slide card" style="width: 400px;">
+                        <div class="slide purple card" style="width: 400px;">
                             <img src="../img/slide_example.png" width="100%">
                             <div class="content">
                                 <div class="header" style="margin-top: 40px;">(スライド番号).研究タイトル</div>
@@ -239,51 +244,53 @@ require_once('card.php');
                                         </div>
                                     </div>
                                     <div class="column youtube-icon">
-                                        <div class="ui icon button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div>
+                                        <form action="student.php" method="POST">
+                                            <div class="ui comment icon button" data-tooltip="コメントする" data-variation="tiny" name='getId'><i class="ui comment alternate icon"></i></div>
+                                        </form>
+                                        <!-- <div class="ui icon comment button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div> -->
                                         <a class="ui youtube button right floated"><i class="youtube icon"></i>発表動画</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- card-item -->
-                        <?php foreach ($rows as $row): $studentData = new Card($row)?>
-                            <div class="slide card" style="width:400px;" id="card">
-                                <?php echo $studentData -> getEmbeddedLink() ?>
-                                <div class="content" style="padding-bottom: 0.6em;">
-                                    <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>
-                                    <div class="ui two column grid">
-                                        <div class="column time">
-                                            <div><?php echo "①".$studentData -> getTime1() ?></div>
-                                            <div><?php echo "②".$studentData -> getTime2() ?></div>
-                                        </div>
-                                        <div class="column student-name"><?php echo $studentData -> getName() ?></div>
+                        <?php foreach ($m1 as $row): $studentData = new Card($row)?>
+                        <div class="slide card" style="width:400px;" id="card">
+                            <?php echo $studentData -> getEmbeddedLink() ?>
+                            <div class="content" style="padding-bottom: 0.6em;">
+                                <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>
+                                <div class="ui two column grid">
+                                    <div class="column time">
+                                        <div><?php echo "①".$studentData -> getTime1() ?></div>
+                                        <div><?php echo "②".$studentData -> getTime2() ?></div>
                                     </div>
+                                    <div class="column student-name"><?php echo $studentData -> getName() ?></div>
                                 </div>
-                                <div class="extra content">
-                                    <div class="ui two column grid">
-                                        <div class="column">
-                                                <div class="ui tag labels" style="margin-left: 0em;">
-                                                    <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
-                                                    <?php
-                                                    $tag2 = $studentData->getTag2();
-                                                    if($tag2 != null) {
-                                                        echo "<p><a class='ui tag label'>{$tag2}</a></p>";
-                                                    } else {
-                                                        echo "<br>";
-                                                    }
-                                                    ?>
-                                                </div>
-                                            </div>
-                                            <div class="column youtube-icon">
-                                                
-                                                <?php
-                                            echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                            </div>
+                            <div class="extra content">
+                                <div class="ui two column grid">
+                                    <div class="column">
+                                        <div class="ui tag labels" style="margin-left: 0em;">
+                                            <?php
+                                            $tag1 = $studentData->getTag1();
+                                            echo "<p><a class='ui tag label {$studentData->getTagColor($tag1, $tagList, $colorsDict)}'>{$tag1}</a></p>";
+                                            $tag2 = $studentData->getTag2();
+                                            if($tag2 != null) {
+                                                echo "<p><a class='ui tag label {$studentData->getTagColor($tag2, $tagList, $colorsDict)}'>{$tag2}</a></p>";
+                                            } else {
+                                                echo "<br>";
+                                            }
                                             ?>
-                                                <i class="ui comment alternate icon"></i>
-                                            </div>
-                                            <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
-                                            <i class="youtube icon"></i>YouTube
-                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="column youtube-icon">
+                                        <?php
+                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                        ?>
+                                        <i class="ui comment alternate icon"></i></div>
+                                    <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
+                                    <i class="youtube icon"></i>YouTube</a>
                                     </div>
                                 </div>
                             </div>
@@ -375,26 +382,28 @@ require_once('card.php');
                 <h3>M2</h3>
                 <div class="container">
                     <div class="ui cards centered">
+
                         <!-- card-item -->
-                        <?php foreach ($rows as $row): $studentData = new Card($row)?>
-                            <div class="card" style="width:400px;" id="card">
-                                <?php echo $studentData -> getEmbeddedLink() ?>
-                                <div class="content" style="padding-bottom: 0.6em;">
-                                    <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>
-                                    <div class="ui two column grid">
-                                        <div class="column time">
-                                            <div><?php echo "①".$studentData -> getTime1() ?></div>
-                                            <div><?php echo "②".$studentData -> getTime2() ?></div>
-                                        </div>
-                                        <div class="column student-name"><?php echo $studentData -> getName() ?></div>
+                        <?php foreach ($m2 as $row): $studentData = new Card($row)?>
+                        <div class="card" style="width:400px;" id="card">
+                            <?php echo $studentData -> getEmbeddedLink() ?>
+                            <div class="content" style="padding-bottom: 0.6em;">
+                                <div class="header" style="padding-bottom: 1rem;"><?php echo $studentData -> getSlideNumber() .". ".$studentData -> getTitle() ?></div>
+                                <div class="ui two column grid">
+                                    <div class="column time">
+                                        <div><?php echo "①".$studentData -> getTime1() ?></div>
+                                        <div><?php echo "②".$studentData -> getTime2() ?></div>
+                                        
                                     </div>
+                                    <div class="column student-name"><?php echo $studentData -> getName() ?></div>
                                 </div>
-                                <div class="extra content">
-                                    <div class="ui two column grid">
-                                        <div class="column">
-                                                <div class="ui tag labels" style="margin-left: 0em;">
-                                                    <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
-                                                    <?php
+                            </div>
+                            <div class="extra content">
+                                <div class="ui two column grid">
+                                    <div class="column">
+                                        <div class="ui tag labels" style="margin-left: 0em;">
+                                            <p><a class="ui tag label"><?php echo $studentData -> getTag1() ?></a></p>
+                                            <?php
                                                     $tag2 = $studentData->getTag2();
                                                     if($tag2 != null) {
                                                         echo "<p><a class='ui tag label'>{$tag2}</a></p>";
@@ -403,15 +412,21 @@ require_once('card.php');
                                                     }
                                                     ?>
                                                 </div>
-                                        </div>
-                                        <div class="column youtube-icon">
-                                            <button class="ui youtube button right floated" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')" style="vertical-align: bottom;">
+                                            </div>
+                                            <div class="column youtube-icon">
+                                                
+                                                <?php
+                                            echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                            ?>
+                                                <i class="ui comment alternate icon"></i>
+                                            </div>
+                                            <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
                                             <i class="youtube icon"></i>YouTube
-                                            </button>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <?php endforeach ?>
                     </div> <!-- /card-container -->
                 </div> <!-- /card-inner -->
