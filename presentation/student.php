@@ -88,6 +88,13 @@ require_once('card.php');
                                 prompt: '有効なアドレスをご記入ください'
                             }]
                         },
+                        slideNumber: {
+                            identifier: 'slideNumber',
+                            rules: [{
+                                type: 'empty',
+                                prompt: 'コメントするスライド番号を選択してください'
+                            }]
+                        },
                         comment: {
                             identifier: 'comment',
                             rules: [
@@ -202,67 +209,7 @@ require_once('card.php');
                     </div>
                 </div>
             </div>
-
-        <!-- comment modal -->
-        <?php date_default_timezone_set ('Asia/Tokyo'); ?>
-        <div class="ui small modal">
-            <?php
-                // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
-                if (true):
-            ?>
-                <i class="close icon"></i>
-                <div class="header">
-                    コメント入力フォーム
-                </div>
-                <div class="content">
-                    <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
-                    <!--  " -->
-                    <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
-                        <p>
-                            <div class="required field">
-                                <label>1. お名前（必須）</label>
-                                <input class="required-form" type="text" name="entry.1993511996" placeholder="社工 花子" id="name">
-                            </div>
-                        </p>
-                        <div class="field">
-                            <label>2. メールアドレス（返事を希望の場合）</label>
-                            <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
-                        </div>
-                        <div class="field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden" name="entry.846302703" value="yes">
-                                <label>返信を希望する</label>
-                            </div>
-                        </div>
-                        <div class="required field">
-                            <label>3. 発表内容へのコメントまたは質問（必須）</label>
-                            <textarea name="entry.825151473" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" id="comment"></textarea>
-                        </div>
-                        <div class="ui error message"></div>
-                        <div class="actions">
-                            <div class="ui cancel button">
-                                キャンセル
-                            </div>
-                            <button class="ui comment-submit button" type="submit">送信する</button>
-                        </div>
-                    </form>
-                    <script type="text/javascript">submitted = false;</script>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='comment.php';}"></iframe>
-                </div>
-            <?php else: ?>
-                <div class="image content">
-                    <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
-                    <div class="description">
-                        <h2>Sorry...</h2>
-                        <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
-                    </div>
-                </div>
-                <div class="actions">
-                    <div class="ui cancel button">戻る</div>
-                </div>
-            <?php endif; ?>
-        </div>
-                
+            
             <!-- M1 スライドセクション -->
             <a id="M1" class="anchor"></a>
             <div class="M1 materials">
@@ -271,7 +218,7 @@ require_once('card.php');
                     <div class="ui cards centered" id="cards">
                         <!-- card example -->
                         <div class="slide card" style="width: 400px;">
-                            <img src="../img/slide_example.png">
+                            <img src="../img/slide_example.png" width="100%">
                             <div class="content">
                                 <div class="header" style="margin-top: 40px;">(スライド番号).研究タイトル</div>
                                 <div class="ui grid">
@@ -326,24 +273,102 @@ require_once('card.php');
                                                     }
                                                     ?>
                                                 </div>
-                                        </div>
-                                        <div class="column youtube-icon">
-                                            <div class="ui comment icon button" data-tooltip='コメントする' data-variation="tiny">
+                                            </div>
+                                            <div class="column youtube-icon">
+                                                
+                                                <?php
+                                            echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                            ?>
                                                 <i class="ui comment alternate icon"></i>
                                             </div>
                                             <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui youtube button right floated">
-                                                <i class="youtube icon"></i>YouTube
-                                            </a>
-                                        </div>
+                                            <i class="youtube icon"></i>YouTube
+                                        </a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <?php endforeach ?>
-
+                        
                     </div>
                 </div>
             </div>
-
+            
+                    <!-- comment modal -->
+                    <?php date_default_timezone_set ('Asia/Tokyo'); ?>
+                    <div class="ui small modal">
+                        <?php
+                            // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
+                            if (true):
+                        ?>
+                            <i class="close icon"></i>
+                            <div class="header">
+                                コメント入力フォーム
+                            </div>
+                            <div class="content">
+                                <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
+                                <!--  " -->
+                                <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
+                                    <p>
+                                        <div class="required field">
+                                            <label>1. お名前（必須）</label>
+                                            <input class="required-form" type="text" name="entry.1993511996" placeholder="社工 花子" id="name">
+                                        </div>
+                                    </p>
+                                    <div class="field">
+                                        <label>2. メールアドレス（返事を希望の場合）</label>
+                                        <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
+                                    </div>
+                                    <div class="field">
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" tabindex="0" class="hidden" name="entry.846302703" value="yes">
+                                            <label>返信を希望する</label>
+                                        </div>
+                                    </div>
+                                    <div class="required field">
+                                        <label>3.スライド番号および発表者名（必須）</label>
+                                        <select name="entry.1978908169" class="ui fluid dropdown" id="slideNumber">
+                                            <option value="">コメントするスライド</option>
+                                            <?php
+                                            $memberList = $studentData -> getMemberList();
+                                            $cnt = count($memberList) -1;
+                                            echo $memberList[0];
+                                            for ($i=0; $i<=$cnt; $i++) {
+                                                // $value = $i+1;
+                                                echo "<option value={$memberList[$i]}>".$memberList[$i]."</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="required field">
+                                        <label>4. 発表内容へのコメントまたは質問（必須）</label>
+                                        <textarea name="entry.825151473" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" id="comment"></textarea>
+                                    </div>
+                                    <div class="ui error message"></div>
+                                    <div class="actions">
+                                        <div class="ui cancel button">
+                                            キャンセル
+                                        </div>
+                                        <button class="ui comment-submit button" type="submit">送信する</button>
+                                    </div>
+                                </form>
+                                <script type="text/javascript">submitted = false;</script>
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='comment.php';}"></iframe>
+                            </div>
+                        <?php else: ?>
+                            <div class="image content">
+                                <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
+                                <div class="description">
+                                    <h2>Sorry...</h2>
+                                    <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="ui cancel button">戻る</div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+            
             <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
             <div class="M2 materials">

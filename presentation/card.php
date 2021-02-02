@@ -8,6 +8,7 @@ class Card{
     private $tag2;
     private $embeddedLink;
     private static $slideNumber = 0;
+    private static $memberList = array();
     
     public function __construct($row) {
         $this -> title = $row[0];
@@ -18,6 +19,8 @@ class Card{
         $this -> tag2 = $row[6];
         $this -> embeddedLink = $row[7];
         self::$slideNumber++;
+        self::$memberList[] = self::$slideNumber.'. '.$row[2];
+        // self::$memberDict += array('card'.$this->getSlideNumber() => $this->getSlideNumber().$this->getName());
     }
 
     // プライベートプロパティを取得(ゲッター)
@@ -29,6 +32,8 @@ class Card{
     public function getTag2() {return $this -> tag2;}
     public function getEmbeddedLink() {return $this -> embeddedLink;}
     public static function getSlideNumber() {return self::$slideNumber;}
+    public static function getMemberList() {return self::$memberList;}
+    // public static function getCommentedName($key) {return self::$memberDict[$key];}
 }
 
 ?>
