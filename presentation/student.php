@@ -146,11 +146,11 @@ require_once('card.php');
                     <h2>Presentation slide</h2>
                     <div class="ui grid seg-content">
                         <div class="column">
-                            <div class="ui raised segment" style="width:70%;margin:0 auto;text-align:left;">
-                                <a class="ui red ribbon label">M1</a>
+                            <div class="ui raised segment" style="width:75%;margin:0 auto;text-align:left;">
+                                <a class="ui red ribbon label">修士１年（M1）</a>
                                 <span>これから取り組む・これまでに取り組んだ産官学連携研究について、その計画や成果について発表します</span>
                                 <p></p>
-                                <a class="ui blue ribbon label">M2</a>
+                                <a class="ui blue ribbon label">修士２年（M2）</a>
                                 <span>修士の間に行った産官学連携研究の成果について発表します</span>
                                 <p></p>
                                 <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div>
@@ -163,8 +163,8 @@ require_once('card.php');
             <!-- メニュー -->
             <div class="content">
             <div class="grade">
-                <div class="ui stackable menu grid">
-                    <div class="active item three wide column">
+                <div class="ui stackable menu grid" style="font-size: 16px;">
+                    <div class="active item two wide column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
                             <div class="text"><a href="#" style="color:purple;">Student</a></div>
                             <i class="dropdown icon"></i>
@@ -174,7 +174,7 @@ require_once('card.php');
                             </div>
                         </div>
                     </div>
-                    <div class="item three wide grid column">
+                    <div class="item two wide grid column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
                             <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
                             <i class="dropdown icon"></i>
@@ -189,7 +189,7 @@ require_once('card.php');
                             <div class="text" ><a href="#" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
-                    <div class="item seven wide column">
+                    <div class="item nine wide column">
                         <div class="search-area" style="margin:0 auto;">
                             <form method="get" action="" style="display:inline-block;">
                                 <select name="研究分野" class="ui dropdown" id="field" style="margin:0.5em;width:50%;">
@@ -213,7 +213,7 @@ require_once('card.php');
             <!-- M1 スライドセクション -->
             <a id="M1" class="anchor"></a>
             <div class="M1 materials">
-                <h3>M1</h3>
+                <h3>M 1</h3>
                 <div class="container">
                     <div class="ui cards centered" id="cards">
                         <!-- card example -->
@@ -295,7 +295,7 @@ require_once('card.php');
             <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
             <div class="M2 materials">
-                <h3>M2</h3>
+                <h3>M 2</h3>
                 <div class="container">
                     <div class="ui cards centered">
                         
@@ -344,7 +344,7 @@ require_once('card.php');
                     </div>
                 </div>
             </div>
-            
+
             <!-- comment modal -->
             <?php date_default_timezone_set ('Asia/Tokyo'); ?>
             <div class="ui small modal">

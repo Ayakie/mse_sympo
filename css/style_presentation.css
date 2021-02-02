@@ -25,6 +25,10 @@ a.anchor {
   padding-top:2em;
   margin:0 auto 1em auto;
 }
+/*  反映されない */
+.stackable.menu.grid {
+  font-size: 16px;
+}
 
 /* ------------------　資料達　------------------ */
 /* 参考
@@ -83,7 +87,7 @@ https://sato-you.com/side_by_side_cards/
 .column.youtube-icon {
   position: relative;
 }
-.youtube.button.right.floated {
+.ui.red.basic.button {
   position: absolute;
   top: 14px;
   right: 14px;
