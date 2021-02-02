@@ -30,29 +30,24 @@ require_once('card.php');
                   on: 'hover'
                 });
                 $('.ui.checkbox').checkbox();
-              })
-            ;
 
-            // スムーススクロール
-            $(function(){
-            $('a[href^="#"]').click(function(){
-                var speed = 500;
-                var href= $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
-                $("html, body").animate({scrollTop:position}, speed, "swing");
-                return false;
-            });
-            });
-            
-            // タグ絞り込み
-            $(function(){
+                // スムーススクロール
+                $('a[href^="#"]').click(function(){
+                    var speed = 500;
+                    var href= $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top;
+                    $("html, body").animate({scrollTop:position}, speed, "swing");
+                    return false;
+                });
+
+                // タグ絞り込み
                 $("#button").bind("click",function(){
-
+    
                 var field;
                 field = $("#field").val();
                 re = new RegExp(field);
-
+    
                     $(".cards  .card").each(function(){
                         var txt = $(this).find("p").text();
                         if(txt.match(re) != null){
@@ -62,20 +57,49 @@ require_once('card.php');
                         }
                     });
                 });
-
+    
                 $("#button2").bind("click",function(){
                     $(".cards .card").show();
                 });
-            });
 
-            // コメントモーダル
-            $(function() {
+                // モーダル(コメントフォーム)
+                $('.ui.modal').modal('setting', 'detachable', false)
                 $('.comment.icon.button').click(function() {
                     $('.ui.modal')
                     .modal('setting', 'closable', false)
                     .modal('show');
                 });
-            })
+
+                // Form vaidation
+                $('.ui.form').form({
+                    fields: {
+                        name: {
+                            identifier: 'name',
+                            rules: [{
+                                type: 'empty',
+                                prompt: 'お名前は必須項目です'
+                            }]
+                        },
+                        email: {
+                            identifier: 'email',
+                            optional: true,
+                            rules: [{
+                                type: 'email',
+                                prompt: '有効なアドレスをご記入ください'
+                            }]
+                        },
+                        comment: {
+                            identifier: 'comment',
+                            rules: [
+                                {type: 'minLength[10]',
+                                prompt: '10文字以上でお書きください'},
+                                {type: 'regExp[/[^A-Za-z0-9]/]',
+                                prompt: '半角文字のみは禁止です'}
+                            ]
+                        }
+                    }
+                })
+              });
 
         </script>
 
@@ -188,36 +212,42 @@ require_once('card.php');
             ?>
                 <i class="close icon"></i>
                 <div class="header">
-                    ここはスライド番号とタイトルを変数で組み込みたい
+                    コメント入力フォーム
                 </div>
                 <div class="content">
                     <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
-                    <form class="ui form" method="POST" action="comment.php">
-                        <div class="required field">
-                            <label>1. お名前（必須）</label>
-                            <input type="text" name="name" placeholder="社工 花子" required>
-                        </div>
+                    <!--  " -->
+                    <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
+                        <p>
+                            <div class="required field">
+                                <label>1. お名前（必須）</label>
+                                <input class="required-form" type="text" name="entry.1993511996" placeholder="社工 花子" id="name">
+                            </div>
+                        </p>
                         <div class="field">
                             <label>2. メールアドレス（返事を希望の場合）</label>
-                            <input type="email" name="email" placeholder="aaabbb@gmail.com">
+                            <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
                         </div>
                         <div class="field">
                             <div class="ui checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden" name="need-reply" value="yes">
+                                <input type="checkbox" tabindex="0" class="hidden" name="entry.846302703" value="yes">
                                 <label>返信を希望する</label>
                             </div>
                         </div>
                         <div class="required field">
                             <label>3. 発表内容へのコメントまたは質問（必須）</label>
-                            <textarea name="comment" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" minlength="10" required></textarea>
+                            <textarea name="entry.825151473" rows="4" placeholder="発表スライドや動画に対する感想や質問等を10文字以上でご自由にお書きください。半角文字のみは不可。" id="comment"></textarea>
                         </div>
+                        <div class="ui error message"></div>
                         <div class="actions">
                             <div class="ui cancel button">
                                 キャンセル
                             </div>
-                            <button class="ui positive comment-submit button" type="submit">送信する</button>
+                            <button class="ui comment-submit button" type="submit">送信する</button>
                         </div>
                     </form>
+                    <script type="text/javascript">submitted = false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='comment.php';}"></iframe>
                 </div>
             <?php else: ?>
                 <div class="image content">

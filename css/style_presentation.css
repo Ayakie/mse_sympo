@@ -25,7 +25,6 @@ a.anchor {
   padding-top:2em;
   margin:0 auto 1em auto;
 }
-/* ------------------　切り替えボタン　------------------ */
 
 /* ------------------　資料達　------------------ */
 /* 参考
@@ -175,4 +174,9 @@ https://sato-you.com/side_by_side_cards/
   left: 0;
   margin: auto;
   text-align: center;
+}
+
+/* お問い合わせフォーム */
+.error.message {
+  display: none;
 }

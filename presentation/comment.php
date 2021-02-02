@@ -43,13 +43,13 @@
 <!-- csvファイルへの書き込み -->
 <?php
 
-date_default_timezone_set('Asia/Tokyo'); // タイムゾーン設定
-$data[] = date("Y-m-d H:i"); // コメント日時
-$data[] = $_POST['name'];
-$data[] = $_POST['email'];
-$data[] = $_POST['need-reply'];
-$data[] = str_replace(array("\r\n", "\r", "\n"), "<BR>", $_POST['comment']); // 改行を"<br>"に置き換え
-// mb_convert_variables('Shift_JIS', 'UTF-8', $data); //文字コードをUTF-8からShiftJISに変更
-$csv = fopen('comment.csv', 'a'); //最後行に追加する形で書き込み
-fputcsv($csv, $data);
-fclose($csv);
+// date_default_timezone_set('Asia/Tokyo'); // タイムゾーン設定
+// $data[] = date("Y-m-d H:i"); // コメント日時
+// $data[] = $_POST['name'];
+// $data[] = $_POST['email'];
+// $data[] = $_POST['need-reply'];
+// $data[] = str_replace(array("\r\n", "\r", "\n"), "<BR>", $_POST['comment']); // 改行を"<br>"に置き換え
+// // mb_convert_variables('Shift_JIS', 'UTF-8', $data); //文字コードをUTF-8からShiftJISに変更
+// $csv = fopen('comment.csv', 'a'); //最後行に追加する形で書き込み
+// fputcsv($csv, $data);
+// fclose($csv);
