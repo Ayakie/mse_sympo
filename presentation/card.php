@@ -19,6 +19,7 @@ class Card{
         $this -> tag1 = $row[5];
         $this -> tag2 = $row[6];
         $this -> embeddedLink = $row[7];
+        $this -> youtubeLink = $row[8];
         self::$slideNumber++;
         self::$memberList[] = self::$slideNumber.'．'.$row[2];
         // self::$tags[] = $row[5];
@@ -33,6 +34,7 @@ class Card{
     public function getTag1() {return $this -> tag1;}
     public function getTag2() {return $this -> tag2;}
     public function getEmbeddedLink() {return $this -> embeddedLink;}
+    public function getYoutubeLink() {return $this -> youtubeLink;}
     public static function getSlideNumber() {return self::$slideNumber;}
     public static function getMemberList() {return self::$memberList;}
     // public static function getTags() {return self::$tags;}
