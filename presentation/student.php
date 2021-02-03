@@ -337,8 +337,8 @@ require_once('card.php');
             <?php date_default_timezone_set ('Asia/Tokyo'); ?>
             <div class="ui small modal">
                 <?php
-                    // if (('2021-02-12 10:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
-                    if (true):
+                    if (('2021-02-11 00:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
+                    // if (true):
                 ?>
                     <i class="close icon"></i>
                     <div class="header">
@@ -365,15 +365,13 @@ require_once('card.php');
                                 </div>
                             </div>
                             <div class="required field">
-                                <label>3.スライド番号および発表者名（必須）</label>
+                                <label>3. スライド番号および発表者名（必須）</label>
                                 <select name="entry.1978908169" class="ui fluid dropdown" id="slideNumber">
                                     <option value="">コメントするスライド</option>
                                     <?php
                                     $memberList = $studentData -> getMemberList();
                                     $cnt = count($memberList) -1;
-                                    echo $memberList[0];
                                     for ($i=0; $i<=$cnt; $i++) {
-                                        // $value = $i+1;
                                         echo "<option value={$memberList[$i]}>".$memberList[$i]."</option>";
                                     }
                                     ?>
@@ -399,7 +397,7 @@ require_once('card.php');
                         <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
                         <div class="description">
                             <h2>Sorry...</h2>
-                            <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.12 10:00 ~ 2021.02.14 00:00 です。</p>
+                            <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.11 00:00 ~ 2021.02.14 00:00 です。</p>
                         </div>
                     </div>
                     <div class="actions">

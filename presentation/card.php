@@ -20,7 +20,7 @@ class Card{
         $this -> tag2 = $row[6];
         $this -> embeddedLink = $row[7];
         self::$slideNumber++;
-        self::$memberList[] = self::$slideNumber.'. '.$row[2];
+        self::$memberList[] = self::$slideNumber.'．'.$row[2];
         // self::$tags[] = $row[5];
         // self::$memberDict += array('card'.$this->getSlideNumber() => $this->getSlideNumber().$this->getName());
     }
