@@ -163,7 +163,7 @@ require_once('card.php');
                         </div>
                     </div>
                     <div class="item three wide grid column">
-                        <div style="margin:0 auto;">
+                        <div class="ui pointing dropdown" style="margin:0 auto;">
                             <div class="text" ><i class="calendar alternate outline icon"></i>Time Table</a></div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
@@ -269,7 +269,7 @@ require_once('card.php');
                                         echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                    <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui red basic button right floated">
+                                    <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui red basic button right floated">
                                     <i class="youtube icon"></i>YouTube</a>
                                     </div>
                                 </div>
