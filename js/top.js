@@ -1,5 +1,4 @@
-$(document)
-    .ready(function() {
+$(function() {
     // タイトルアニメーション
     // 右からの遷移の場合、親要素のwidthが崩れる
     var showTime = function() {
@@ -10,5 +9,10 @@ $(document)
         duration: 800,
         onComplete: showTime
     });
-    })
-;
+
+
+    $('.card').popup({
+        inline: true,
+        position: 'bottom center'
+    });
+});

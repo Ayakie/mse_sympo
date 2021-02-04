@@ -21,9 +21,6 @@ require_once('card.php');
         <link rel="stylesheet" href="../css/style_presentation.css">
         <link rel="stylesheet" href="../css/style_top.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-        <!-- jQuery -->
-        <script type="text/javascript" src="../js/utils.js"></script>
-        <script type="text/javascript" src="../js/presentation.js"></script>
 
     </head>
 
@@ -109,7 +106,7 @@ require_once('card.php');
                 <div class="ui two column centered grid">
                     <div class="four column centered row">
                         <div class="column"><h3 style="text-align: right;">M 1</h3></div>
-                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://docs.google.com/forms/d/1M_dJiEUfQcOdDzkPbFlcpnfEaXhAS3U_KDBAPmRzEGY/edit?usp=sharing','_blank')"><i class="archive icon"></i> 投票（M1）</a></div>
+                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://forms.gle/uDWLYMFK1sjGvLoeA','_blank')"><i class="archive icon"></i> 投票（M1）</a></div>
                     </div>
                 </div>
                 <div class="container">
@@ -196,7 +193,7 @@ require_once('card.php');
                 <div class="ui two column centered grid">
                     <div class="four column centered row">
                         <div class="column"><h3 style="text-align: right;">M 2</h3></div>
-                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://docs.google.com/forms/d/1wUZuXqFTd7_GmrD95Ay3u07AFKjEv-3fwcfm-RXslD0/edit?usp=sharing','_blank')"><i class="archive icon"></i> 投票（M2）</a></div>
+                        <div class="column"  style="padding-left: 60px;"><button class="ui inverted secondary large button" onclick="window.open('https://forms.gle/ZKLCiJWBFgwY9gF9A','_blank')"><i class="archive icon"></i> 投票（M2）</a></div>
                     </div>
                 </div>
                 <div class="container">
@@ -320,12 +317,6 @@ require_once('card.php');
                     </div>
                 <?php endif; ?>
             </div>
-            
-            <!-- <div class="voting" id="voting-button">
-                <button class="ui inverted secondary button" onclick="window.open('https://youtu.be/Oezmni8SklA','_blank')">
-                <i class="archive icon"></i>投票はこちらから
-                </button>
-            </div> -->
 
             </div> <!-- /content 終わり-->
 
@@ -334,6 +325,8 @@ require_once('card.php');
             <!-- footer -->
             <?php include('../assets/footer.html'); ?>
         </div>
-
+        <!-- jQuery -->
+        <script type="text/javascript" src="../js/utils.js"></script>
+        <script type="text/javascript" src="../js/presentation.js"></script>
     </body>
 </html>

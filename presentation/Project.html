@@ -15,28 +15,6 @@
         <link rel="stylesheet" href="../css/style_presentation.css">
         <link rel="stylesheet" href="../css/style_top.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-        <!-- jQuery -->
-        <script>
-            $(document)
-              .ready(function() {
-                // show dropdown on hover
-                $('.ui.dropdown').dropdown({
-                  on: 'hover'
-                });
-              })
-            ;
-
-            $(function(){
-            $('a[href^="#"]').click(function(){
-                var speed = 500;
-                var href= $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
-                $("html, body").animate({scrollTop:position}, speed, "swing");
-                return false;
-            });
-            });
-        </script>
     </head>
 
     <body>
@@ -320,6 +298,7 @@
 
         <!-- footer -->
         <?php include('../assets/footer.html'); ?>
-
+        <!-- jQuery -->
+        <script type="text/javascript" src="../js/utils.js"></script>
     </body>
 </html>
