@@ -327,7 +327,7 @@ require_once('card.php');
                                         echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                        <a href="https://youtu.be/Oezmni8SklA" target="_blank" class="ui red basic button right floated">
+                                        <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui red basic button right floated">
                                         <i class="youtube icon"></i>YouTube</a>
                                     </div>
                                 </div>
