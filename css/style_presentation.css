@@ -87,16 +87,17 @@ https://sato-you.com/side_by_side_cards/
 .column.youtube-icon {
   position: relative;
 }
-.ui.red.basic.button {
+.ui.purple.basic.button {
   position: absolute;
   top: 14px;
   right: 14px;
 }
-.column.student-name {
-  padding-right: 22px;
-  text-align: right;
-  letter-spacing: 1.2px;
+.column.labo {
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .column.time {
   letter-spacing: 1.1px;
 }

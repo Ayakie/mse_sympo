@@ -26,10 +26,13 @@
     <body>
         <div class="ui small modal">
             <div class="image content">
-                <div class="ui medium image"><img src="../img/thx_msg.png"></div>
-                <div class="description">
-                    <h2>Thank you!</h2>
-                    <p>コメントありがとうございます。お返事をご希望の場合、発表者本人よりご返信差し上げます。</p>
+                <div class="ui large image">
+                    <img src="../img/preparing.png">
+                </div>
+                <div class="discription">
+                    <h2 style="margin: 30px;">In progress...</h2>
+                    <p>学生発表のコンテンツ公開は9日の予定です。</p>
+                    <p>公開まで今しばらくお待ちください。</p>
                 </div>
             </div>
             <div class="actions">
@@ -37,18 +40,5 @@
             </div>
         </div>
     </body>
+    
 </html>
-
-<!-- csvファイルへの書き込み -->
-<?php
-
-// date_default_timezone_set('Asia/Tokyo'); // タイムゾーン設定
-// $data[] = date("Y-m-d H:i"); // コメント日時
-// $data[] = $_POST['name'];
-// $data[] = $_POST['email'];
-// $data[] = $_POST['need-reply'];
-// $data[] = str_replace(array("\r\n", "\r", "\n"), "<BR>", $_POST['comment']); // 改行を"<br>"に置き換え
-// // mb_convert_variables('Shift_JIS', 'UTF-8', $data); //文字コードをUTF-8からShiftJISに変更
-// $csv = fopen('comment.csv', 'a'); //最後行に追加する形で書き込み
-// fputcsv($csv, $data);
-// fclose($csv);

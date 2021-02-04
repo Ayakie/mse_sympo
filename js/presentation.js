@@ -1,5 +1,4 @@
-$(document)
-    .ready(function() {
+$(function() {
     // タグ絞り込み
     $("#button").bind("click",function(){
     

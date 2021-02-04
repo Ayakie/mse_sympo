@@ -28,7 +28,7 @@ require_once('card.php');
         <div class="main">
 
             <!-- header -->
-            <?php include('../assets/header.html'); ?>
+            <?php include('../assets/header.php'); ?>
 
             <div class="head">
                 <div class="ui container">
@@ -66,11 +66,11 @@ require_once('card.php');
                     </div>
                     <div class="item two wide grid column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
-                            <div class="text"><a href="Project.html" style="color:black;">Project</a></div>
+                            <div class="text"><a href="project.php" style="color:black;">Project</a></div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <a href="Project.html#labolatory" class="item">Laboratory</a>
-                                <a href="Project.html#placemaking" class="item">Class</a>
+                                <a href="project.php#labolatory" class="item">Laboratory</a>
+                                <a href="project.php#placemaking" class="item">Class</a>
                             </div>
                         </div>
                     </div>
@@ -134,8 +134,8 @@ require_once('card.php');
                                         </div>
                                     </div>
                                     <div class="column youtube-icon">
-                                        <div class="ui icon button" data-tooltip="コメントする" data-variation="tiny"><i class="ui comment alternate icon"></i></div>
-                                        <a class="ui red basic button right floated" style="top: 14px;"><i class="youtube icon"></i>発表動画</a>
+                                        <div class="ui icon button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
+                                        <a class="ui purple basic button right floated" style="top: 14px;"><i class="video icon"></i>発表動画</a>
                                     </div>
                                 </div>
                             </div>
@@ -173,11 +173,11 @@ require_once('card.php');
                                     </div>
                                     <div class="column youtube-icon">
                                         <?php
-                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                    <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui red basic button right floated">
-                                    <i class="youtube icon"></i>YouTube</a>
+                                    <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui icon button">
+                                    <i class="video icon"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -231,11 +231,11 @@ require_once('card.php');
                                     </div>
                                     <div class="column youtube-icon">
                                         <?php
-                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' data-variation='tiny' id='card'.{$studentData->getSlideNumber()}>"
+                                        echo "<div class='ui comment icon button' data-tooltip='コメントする' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                        <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui red basic button right floated">
-                                        <i class="youtube icon"></i>YouTube</a>
+                                        <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui purple basic button right floated">
+                                        <i class="video icon"></i>発表動画</a>
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ require_once('card.php');
             </div>
 
             <!-- comment modal -->
-            <?php date_default_timezone_set ('Asia/Tokyo'); ?>
+            <?php date_default_timezone_set('Asia/Tokyo'); ?>
             <div class="ui small modal">
                 <?php
                     // if (('2021-02-11 00:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
@@ -308,8 +308,8 @@ require_once('card.php');
                     <div class="image content">
                         <div class="ui medium image"><img src="../img/out_of_time.png" alt=""></div>
                         <div class="description">
-                            <h2>Sorry...</h2>
-                            <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.02.11 00:00 ~ 2021.02.14 00:00 です。</p>
+                            <h2 style="margin: 30px;">Sorry...</h2>
+                            <p>ただいまコメントを受け付けておりません。<br>受付時間は 2021.2.11 00:00 ~ 2021.2.14 00:00 です。</p>
                         </div>
                     </div>
                     <div class="actions">

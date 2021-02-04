@@ -14,8 +14,16 @@
                         <i class="caret left icon"></i>
                         ポスターセッション
                         <div class="menu">
-                            <a href="/2020/presentation/student.php" class="item">学生発表（M1・M2）</a>
-                            <a href="/2020/presentation/Project.html" class="item">プロジェクト（Laboratory・Class）</a>
+                            <?php date_default_timezone_set('Asia/Tokyo')?>
+                            <?php
+                            if(date('Y-m-d H:i') > ('2021-02-09 00:00')):
+                            // if(true):
+                            ?>
+                            <a href='/2020/presentation/student.php' class='item'>学生発表（M1・M2）</a>
+                            <?php else:?>
+                                <a href='/2020/assets/preparing.php' class='item'>学生発表（M1・M2）</a>
+                            <?php endif; ?>
+                            <a href="/2020/presentation/project.php" class="item">プロジェクト（Laboratory・Class）</a>
                         </div>
                     </div>
                 </div>
