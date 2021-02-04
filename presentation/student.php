@@ -163,13 +163,8 @@ require_once('card.php');
                         </div>
                     </div>
                     <div class="item three wide grid column">
-                        <div class="ui pointing dropdown" style="margin:0 auto;">
-                            <div class="text" ><i class="calendar alternate outline icon"></i>Time Table</a></div>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <a href="https://drive.google.com/file/d/1CHAst1EpYDKVa5436BgrJqC7a3hWRqLd/preview" class="item" target="_blank">M1</a>
-                                <a href="https://drive.google.com/file/d/1nyQN6OY-X81QnzJUHbx-P_Ad1sfnd2MJ/preview" class="item" target="_blank">M2</a>
-                            </div>
+                        <div style="margin:0 auto;">
+                            <div class="text" ><a href="#" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                     <div class="item nine wide column">
