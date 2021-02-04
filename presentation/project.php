@@ -45,12 +45,20 @@
                 <div class="ui purple stackable menu grid" style="font-size: 16px;">
                     <div class="item five wide column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
-                            <div class="text"><a href="student.php" style="color:black;">Student</a></div>
-                            <i class="dropdown icon"></i>
-                            <div class="menu">
-                                <a href="student.php#M1" class="item">M1</a>
-                                <a href="student.php#M2" class="item">M2</a>
-                            </div>
+                        <?php
+                        date_default_timezone_set('Asia/Tokyo');
+                        if(date('Y-m-d H:i') > ('2021-02-09 00:00')):
+                        // if(true):
+                        ?>
+                        <div class="text"><a href="student.php" style="color:black;">Student</a></div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="student.php#M1" class="item">M1</a>
+                            <a href="student.php#M2" class="item">M2</a>
+                        </div>
+                        <?php else:?>
+                            <div class="text"><a href="../assets/preparing.php" style="color: black;">Student</a></div>
+                        <?php endif; ?>
                         </div>
                     </div>
                     <div class="active item six wide column">
