@@ -37,9 +37,9 @@ section h2 {
     left: 0%;
     font-size: 42px;
     color: white;
-    line-height: 55px;
-    background: linear-gradient(transparent 25%, rgba(163,51,200,0.9) 25%);
-    padding: 0 1em 0.8em 0.8em;
+    line-height: 50px;
+    background: linear-gradient(transparent 20%, rgba(163,51,200,0.9) 20%);
+    padding: 0 1em 0.7em 0.8em;
 }
 #event-time {
     display: none;
