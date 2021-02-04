@@ -22,91 +22,93 @@ require_once('card.php');
         <link rel="stylesheet" href="../css/style_top.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
         <!-- jQuery -->
+        <script type="text/javascript" src="../javascript/utils.js"></script>
+        <script type="text/javascript" src="../javascript/presentation.js"></script>
         <script>
-            $(document)
-              .ready(function() {
-                // show dropdown on hover
-                $('.ui.dropdown').dropdown({
-                  on: 'hover'
-                });
-                $('.ui.checkbox').checkbox();
+            // $(document)
+            //   .ready(function() {
+            //     // show dropdown on hover
+            //     $('.ui.dropdown').dropdown({
+            //       on: 'hover'
+            //     });
+            //     $('.ui.checkbox').checkbox();
 
-                // スムーススクロール
-                $('a[href^="#"]').click(function(){
-                    var speed = 500;
-                    var href= $(this).attr("href");
-                    var target = $(href == "#" || href == "" ? 'html' : href);
-                    var position = target.offset().top;
-                    $("html, body").animate({scrollTop:position}, speed, "swing");
-                    return false;
-                });
+            //     // スムーススクロール
+            //     $('a[href^="#"]').click(function(){
+            //         var speed = 500;
+            //         var href= $(this).attr("href");
+            //         var target = $(href == "#" || href == "" ? 'html' : href);
+            //         var position = target.offset().top;
+            //         $("html, body").animate({scrollTop:position}, speed, "swing");
+            //         return false;
+            //     });
 
-                // タグ絞り込み
-                $("#button").bind("click",function(){
+            //     // タグ絞り込み
+            //     $("#button").bind("click",function(){
     
-                var field;
-                field = $("#field").val();
-                re = new RegExp(field);
+            //     var field;
+            //     field = $("#field").val();
+            //     re = new RegExp(field);
     
-                    $(".cards  .card").each(function(){
-                        var txt = $(this).find("p").text();
-                        if(txt.match(re) != null){
-                            $(this).show();
-                        }else{
-                            $(this).hide();
-                        }
-                    });
-                });
+            //         $(".cards  .card").each(function(){
+            //             var txt = $(this).find("p").text();
+            //             if(txt.match(re) != null){
+            //                 $(this).show();
+            //             }else{
+            //                 $(this).hide();
+            //             }
+            //         });
+            //     });
     
-                $("#button2").bind("click",function(){
-                    $(".cards .card").show();
-                });
+            //     $("#button2").bind("click",function(){
+            //         $(".cards .card").show();
+            //     });
 
-                // モーダル(コメントフォーム)
-                $('.ui.modal').modal('setting', 'detachable', false)
-                $('.comment.icon.button').click(function() {
-                    $('.ui.modal')
-                    .modal('setting', 'closable', false)
-                    .modal('show');
-                });
+            //     // モーダル(コメントフォーム)
+            //     $('.ui.modal').modal('setting', 'detachable', false)
+            //     $('.comment.icon.button').click(function() {
+            //         $('.ui.modal')
+            //         .modal('setting', 'closable', false)
+            //         .modal('show');
+            //     });
 
-                // Form vaidation
-                $('.ui.form').form({
-                    fields: {
-                        name: {
-                            identifier: 'name',
-                            rules: [{
-                                type: 'empty',
-                                prompt: 'お名前は必須項目です'
-                            }]
-                        },
-                        email: {
-                            identifier: 'email',
-                            optional: true,
-                            rules: [{
-                                type: 'email',
-                                prompt: '有効なアドレスをご記入ください'
-                            }]
-                        },
-                        slideNumber: {
-                            identifier: 'slideNumber',
-                            rules: [{
-                                type: 'empty',
-                                prompt: 'コメントするスライド番号を選択してください'
-                            }]
-                        },
-                        comment: {
-                            identifier: 'comment',
-                            rules: [
-                                {type: 'minLength[10]',
-                                prompt: '10文字以上でお書きください'},
-                                {type: 'regExp[/[^A-Za-z0-9]/]',
-                                prompt: '半角文字のみは禁止です'}
-                            ]
-                        }
-                    }
-                })
-              });
+            //     // Form vaidation
+            //     $('.ui.form').form({
+            //         fields: {
+            //             name: {
+            //                 identifier: 'name',
+            //                 rules: [{
+            //                     type: 'empty',
+            //                     prompt: 'お名前は必須項目です'
+            //                 }]
+            //             },
+            //             email: {
+            //                 identifier: 'email',
+            //                 optional: true,
+            //                 rules: [{
+            //                     type: 'email',
+            //                     prompt: '有効なアドレスをご記入ください'
+            //                 }]
+            //             },
+            //             slideNumber: {
+            //                 identifier: 'slideNumber',
+            //                 rules: [{
+            //                     type: 'empty',
+            //                     prompt: 'コメントするスライド番号を選択してください'
+            //                 }]
+            //             },
+            //             comment: {
+            //                 identifier: 'comment',
+            //                 rules: [
+            //                     {type: 'minLength[10]',
+            //                     prompt: '10文字以上でお書きください'},
+            //                     {type: 'regExp[/[^A-Za-z0-9]/]',
+            //                     prompt: '半角文字のみは禁止です'}
+            //                 ]
+            //             }
+            //         }
+            //     })
+            //   });
 
         </script>
 

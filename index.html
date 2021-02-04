@@ -16,53 +16,8 @@
         <link rel="stylesheet" href="/2020/css/style_top.css">
 
         <!-- jQuery -->
-        <script>
-            $(document)
-              .ready(function() {
-                // show dropdown on hover
-                $('.ui.dropdown').dropdown({
-                    on: 'hover'
-                });
-                $('.card').popup({
-                    inline: true,
-                    position: 'bottom center'
-                });
-                $('.dimmable.image').dimmer({
-                    on: 'hover'
-                });
-                // タイトルアニメーション
-                // 右からの遷移の場合、親要素のwidthが崩れる
-                var showTime = function() {
-                    $('#event-time').transition('fly right');
-                };
-                $('#page-title').transition({
-                    animation: 'fly right',
-                    duration: 800,
-                    onComplete: showTime
-                });
-              })
-            ;
-            // jQuery-UI を用いる方法
-            // $(function() {
-            //     var showTime = function() {
-            //         $('#event-time').show('slide', '', 500);
-            //     };
-            //     $('#page-title').show('slide', '', 800, showTime);
-            // });
-
-            // スムーススクロール
-            $(function() {
-            $('a[href^="#"]').click(function(){
-                var speed = 500;
-                var adjust = 50;
-                var href= $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top - adjust;
-                $("html, body").animate({scrollTop:position}, speed, "swing");
-                return false;
-            });
-            });
-        </script>
+        <script type="text/javascript" src="javascript/top.js"></script>
+        <script type="text/javascript" src="javascript/utils.js"></script>
     </head>
 
     <body>
