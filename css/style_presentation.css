@@ -36,6 +36,12 @@ https://shibajuku.net/card-component-markup/
 https://sato-you.com/side_by_side_cards/
 */
 
+/* 適用されない */
+/* .ui.watching.button.right.floated {
+  font-size: 12px;
+  padding: 1em 0.8em;
+} */
+
 /* 資料の背景 */
 .content{
   background-color:white;
@@ -83,14 +89,6 @@ https://sato-you.com/side_by_side_cards/
 }
 .ui.tag.labels {
   margin-left: 0em;
-}
-.column.youtube-icon {
-  position: relative;
-}
-.ui.purple.basic.button {
-  position: absolute;
-  top: 14px;
-  right: 14px;
 }
 .column.labo {
   display: flex !important;
