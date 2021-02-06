@@ -91,8 +91,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">1. データコラボレーション解析技術</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①16:30~16:50</div>
-                                        <div>②17:10~17:30</div>
+                                        <div>①16:30 ~ 16:50 (PJ-1)</div>
+                                        <div>②17:10 ~ 17:30 (PJ-2)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -109,8 +109,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">2. 謝辞ネットワークから見る学術界の引用関係</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①15:50~16:10</div>
-                                        <div>②17:10~17:30</div>
+                                        <div>①15:50 ~ 16:10 (PJ-3)</div>
+                                        <div>②17:10 ~ 17:30 (PJ-3)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -127,8 +127,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">3. つくばみらい市×筑波大学共同研究事業</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①15:30~15:50</div>
-                                        <div>②17:10~17:30</div>
+                                        <div>①15:30 ~ 15:50 (PJ-1)</div>
+                                        <div>②17:10 ~ 17:30 (PJ-1)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -145,8 +145,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">4. 潮来市×潮来高校×筑波大学　地域連携事業</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①16:10~16:30</div>
-                                        <div>②16:50~17:10</div>
+                                        <div>①16:10 ~ 16:30 (PJ-2)</div>
+                                        <div>②16:50 ~ 17:10 (PJ-3)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -163,8 +163,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">5. 筑波大学と天塩町連携による<br>道北地域再生プロジェクト</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①15:50~16:10</div>
-                                        <div>②16:30~16:50</div>
+                                        <div>①15:50 ~ 16:10 (PJ-1)</div>
+                                        <div>②16:30 ~ 16:50 (PJ-2)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -181,8 +181,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">6. 関東鉄道株式会社との連携事業</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①15:30~15:50</div>
-                                        <div>②16:50~17:10</div>
+                                        <div>①15:30 ~ 15:50 (PJ-2)</div>
+                                        <div>②16:50 ~ 17:10 (PJ-2)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -199,8 +199,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">7. 筑波大学×鹿島アントラーズ<br>アカデミックアライアンス</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①16:10~16:30</div>
-                                        <div>②16:50~17:10</div>
+                                        <div>①16:10 ~ 16:30 (PJ-1)</div>
+                                        <div>②16:50 ~ 17:10 (PJ-1)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -217,8 +217,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">8. 観光まちづくりコンテスト</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div></div>
-                                        <div></div>
+                                        <div>① - </div>
+                                        <div>② - </div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
@@ -235,8 +235,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">9. レゴプロジェクト</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>①15:50~16:10</div>
-                                        <div>②16:30~16:50</div>
+                                        <div>①15:50 ~ 16:10 (PJ-2)</div>
+                                        <div>②16:30 ~ 16:50 (PJ-3)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
