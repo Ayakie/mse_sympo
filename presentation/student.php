@@ -76,7 +76,7 @@ require_once('card.php');
                     </div>
                     <div class="item three wide grid column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="#" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                     <div class="item nine wide column">

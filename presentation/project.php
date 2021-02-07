@@ -73,7 +73,7 @@
                     </div>
                     <div class="item five wide column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="https://drive.google.com/file/d/1ZwiKX95QsURergViSxQFUHqpBLD96dUp/preview" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                 </div>
@@ -217,8 +217,8 @@
                                 <div class="header" style="padding-bottom: 1rem;">8. 観光まちづくりコンテスト</div>
                                 <div class="ui two column grid">
                                     <div class="column time">
-                                        <div>① - </div>
-                                        <div>② - </div>
+                                        <div>①15:30 ~ 15:50 (PJ-3)</div>
+                                        <div>②16:10 ~ 16:40 (PJ-3)</div>
                                     </div>
                                     <div class="column labo">
                                         <div class="ui icon comment button" data-tooltip="コメントする"><i class="ui comment alternate icon"></i></div>
