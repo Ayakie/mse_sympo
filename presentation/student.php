@@ -32,14 +32,14 @@ require_once('card.php');
 
             <div class="head">
                 <div class="ui container">
-                    <h2>Presentation slide</h2>
+                    <h2>Presentation slides</h2>
                     <div class="ui grid seg-content">
                         <div class="column">
                             <div class="ui raised segment" style="width:75%;margin:0 auto;text-align:left;">
-                                <a class="ui red ribbon label">修士１年（M1）</a>
+                                <p class="ui red ribbon label">修士１年（M1）</p>
                                 <span>これから取り組む・これまでに取り組んだ産官学連携研究について、その計画や成果について発表します</span>
                                 <p></p>
-                                <a class="ui blue ribbon label">修士２年（M2）</a>
+                                <p class="ui blue ribbon label">修士２年（M2）</p>
                                 <span>修士の間に行った産官学連携研究の成果について発表します</span>
                                 <p></p>
                                 <!-- <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div> -->
@@ -76,7 +76,7 @@ require_once('card.php');
                     </div>
                     <div class="item three wide grid column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                     <div class="item nine wide column">

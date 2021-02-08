@@ -25,14 +25,14 @@
 
             <div class="head">
                 <div class="ui container">
-                    <h2>Project Poster</h2>
+                    <h2>Project Posters</h2>
                     <div class="ui grid seg-content">
                         <div class="column">
                             <div class="ui raised segment" style="width:70%;margin:0 auto;text-align:left;">
-                                <a class="ui orange ribbon label">Laboratory</a>
+                                <p class="ui orange ribbon label">Laboratory</p>
                                 <span>それぞれの研究室で取り組んだ産官学連携研究について紹介します</span>
                                 <p></p>
-                                <a class="ui teal ribbon label">Class</a>
+                                <p class="ui teal ribbon label">Class</p>
                                 <span>授業内で取り組んだ産官学連携プロジェクトの成果について紹介します</span>
                                 <p></p>
                             </div>
