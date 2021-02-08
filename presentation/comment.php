@@ -29,7 +29,7 @@
                 <div class="ui medium image"><img src="../img/thx_msg.png"></div>
                 <div class="description">
                     <h2>Thank you!</h2>
-                    <p>コメントありがとうございます。お返事をご希望の場合、発表者本人よりご返信差し上げます。</p>
+                    <p>コメントありがとうございます。お返事をご希望の場合、発表者よりご返信差し上げます。</p>
                 </div>
             </div>
             <div class="actions">
