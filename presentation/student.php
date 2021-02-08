@@ -249,8 +249,8 @@ require_once('card.php');
             <?php date_default_timezone_set('Asia/Tokyo'); ?>
             <div class="ui small modal">
                 <?php
-                    // if (('2021-02-11 00:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
-                    if (true):
+                    if (('2021-02-11 00:00' < date('Y-m-d H:i')) && (date('Y-m-d H:i') < '2021-02-14 00:00')):
+                    // if (true):
                 ?>
                     <i class="close icon"></i>
                     <div class="header">
@@ -268,7 +268,7 @@ require_once('card.php');
                             </p>
                             <div class="field">
                                 <label>2. メールアドレス（返事を希望の場合）</label>
-                                <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
+                                <input name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
                             </div>
                             <div class="field">
                                 <div class="ui checkbox">

@@ -395,7 +395,7 @@
                             </p>
                             <div class="field">
                                 <label>2. メールアドレス（返事を希望の場合）</label>
-                                <input type="email" name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
+                                <input name="entry.1741669450" placeholder="aaabbb@gmail.com" id="email">
                             </div>
                             <div class="field">
                                 <div class="ui checkbox">
