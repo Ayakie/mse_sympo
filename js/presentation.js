@@ -22,9 +22,10 @@ $(function() {
     );
 
     // モーダル(コメントフォーム)
-    $('.ui.modal').modal('setting', 'detachable', false)
+    // $('.ui.modal').modal('setting', 'detachable', false)
     $('.comment.icon.button').click(function() {
         $('.ui.modal')
+        .modal({centered: false})
         .modal('setting', 'closable', false)
         .modal('show');
     });

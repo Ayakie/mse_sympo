@@ -50,7 +50,7 @@
                         if(date('Y-m-d H:i') > ('2021-02-09 00:00')):
                         // if(true):
                         ?>
-                        <div class="text"><a href="student.php" style="color:black;">Student</a></div>
+                        <div class="text"><a href="student.php">Student</a></div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             <a href="student.php#M1" class="item">M1</a>

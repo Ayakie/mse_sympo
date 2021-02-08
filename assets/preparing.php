@@ -31,7 +31,7 @@
                 </div>
                 <div class="discription">
                     <h2 style="margin: 30px;">In progress...</h2>
-                    <p>学生発表のコンテンツ公開は9日の予定です。</p>
+                    <p>ただいま準備中のコンテンツです。</p>
                     <p>公開まで今しばらくお待ちください。</p>
                 </div>
             </div>

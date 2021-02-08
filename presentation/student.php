@@ -176,7 +176,13 @@ require_once('card.php');
                                         echo "<div class='ui comment icon button' data-tooltip='コメントする' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                    <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+                                    
+                                    <!-- 動画リンク -->
+                                    <?php if(date('Y-m-d H:i') > ('2021-02-10 00:00')):?>
+                                        <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+                                    <?php else:?>
+                                        <a href="../assets/preparing.php" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+                                    <?php endif; ?>
                                     <i class="video icon"></i>発表動画を観る</a>
                                     </div>
                                 </div>
@@ -256,7 +262,7 @@ require_once('card.php');
                     <div class="header">
                         研究に対する感想や応援等を、是非コメントください。
                     </div>
-                    <div class="content">
+                    <div class="scrolling content">
                         <p>コメント内容は他の方から見えませんので、ご自由にお書きください。</p>
                         <!--  " -->
                         <form class="ui form" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0UsuM9GCUMzOqkISNLjVpwDwSbQFo5Wnw3vqEiAeLFGdYdg/formResponse" target="hidden_iframe" onsubmit="submitted=true";>
