@@ -66,17 +66,17 @@ require_once('card.php');
                     </div>
                     <div class="item two wide grid column">
                         <div class="ui pointing dropdown" style="margin:0 auto;">
-                            <div class="text"><a href="project.php" style="color:black;">Project</a></div>
+                            <div class="text"><a href="project" style="color:black;">Project</a></div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
-                                <a href="project.php#labolatory" class="item">Laboratory</a>
-                                <a href="project.php#placemaking" class="item">Class</a>
+                                <a href="project#labolatory" class="item">Laboratory</a>
+                                <a href="project#placemaking" class="item">Class</a>
                             </div>
                         </div>
                     </div>
                     <div class="item three wide grid column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="../assets/発表プログラム.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="../assets/program.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                     <div class="item nine wide column">
@@ -334,7 +334,7 @@ require_once('card.php');
             </div>
             
             <div class="ui centered container" style="margin: 40px;" id="voting-button">
-                <button class="ui inverted secondary huge button" onclick="window.open('https://forms.gle/uDWLYMFK1sjGvLoeA','_blank')" data-tooltip="面白い！と思った研究を最大3つお選びください。この投票結果で、優秀発表賞が決まります。"><i class="archive icon"></i> 投票する</a>
+                <button class="ui inverted secondary huge button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf_X_wbrJaR0ZpE8bFUy_Y5yUx5Gwx1EvPrO0g530ZsxtaKlg/viewform?usp=sf_link','_blank')" data-tooltip="面白い！と思った研究を最大3つお選びください。この投票結果で、優秀発表賞が決まります。"><i class="archive icon"></i> 投票する</a>
             </div>
             </div> <!-- /content 終わり-->
 

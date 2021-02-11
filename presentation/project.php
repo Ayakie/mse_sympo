@@ -50,11 +50,11 @@
                         if(date('Y-m-d H:i') > ('2021-02-09 00:00')):
                         // if(true):
                         ?>
-                        <div class="text"><a href="student.php" style="color: black;">Student</a></div>
+                        <div class="text"><a href="student" style="color: black;">Student</a></div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a href="student.php#M1" class="item">M1</a>
-                            <a href="student.php#M2" class="item">M2</a>
+                            <a href="student#M1" class="item">M1</a>
+                            <a href="student#M2" class="item">M2</a>
                         </div>
                         <?php else:?>
                             <div class="text"><a href="../assets/preparing.php" style="color: black;">Student</a></div>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="item five wide column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="../assets/発表プログラム.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="../assets/program.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                 </div>

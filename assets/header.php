@@ -3,9 +3,9 @@
 <!-- 参考：https://nabewakashi.com/php-include -->
 <div class="ui fixed inverted compact labeled icon menu">
     <div class="ui container">
-        <a href="/2020/index.html" class="item" style="padding-top: 27px;">Data-driven Service Innovationによる社会課題解決を目指す</a>
+        <a href="/2020/" class="item" style="padding-top: 27px;">Data-driven Service Innovationによる社会課題解決を目指す</a>
         <div class="right menu">
-            <a href="/2020/index.html" class="ui purple item"><i class="inverted home icon"></i>トップ</a>
+            <a href="/2020/" class="ui purple item"><i class="inverted home icon"></i>トップ</a>
             <div class="ui dropdown purple item">
                 <i class="inverted file alternate icon"></i>資料リンク
                 <div class="menu">
@@ -19,11 +19,11 @@
                             if(date('Y-m-d H:i') > ('2021-02-09 00:00')):
                             // if(true):
                             ?>
-                            <a href='/2020/presentation/student.php' class='item'>学生発表（M1・M2）</a>
+                            <a href='/2020/presentation/student' class='item'>学生発表（M1・M2）</a>
                             <?php else:?>
                                 <a href='/2020/assets/preparing.php' class='item'>学生発表（M1・M2）</a>
                             <?php endif; ?>
-                            <a href="/2020/presentation/project.php" class="item">プロジェクト（Laboratory・Class）</a>
+                            <a href="/2020/presentation/project" class="item">プロジェクト（Laboratory・Class）</a>
                         </div>
                     </div>
                 </div>
