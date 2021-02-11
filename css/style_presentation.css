@@ -134,7 +134,7 @@ https://sato-you.com/side_by_side_cards/
 
 /* ------------------　pagetop　------------------ */
 #page_top{
-  width: 100px;
+  width: 110px;
   height: 60px;
   position: fixed;
   right: 0;
@@ -146,7 +146,7 @@ https://sato-you.com/side_by_side_cards/
 #page_top a{
   position: relative;
   display: block;
-  width: 100px;
+  width: 110px;
   height: 60px;
   text-decoration: none;
 }

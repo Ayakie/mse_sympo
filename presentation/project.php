@@ -73,7 +73,7 @@
                     </div>
                     <div class="item five wide column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="../assets/発表プログラム.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                 </div>

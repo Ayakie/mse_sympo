@@ -42,7 +42,7 @@ require_once('card.php');
                                 <p class="ui blue ribbon label">修士２年（M2）</p>
                                 <span>修士の間に行った産官学連携研究の成果について発表します</span>
                                 <p></p>
-                                <!-- <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div> -->
+                                <div class="column" style="text-align: center; font-size: 16px;">投票は<a href="#voting-button">こちら</a>から</div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ require_once('card.php');
                     </div>
                     <div class="item three wide grid column">
                         <div style="margin:0 auto;">
-                            <div class="text" ><a href="https://drive.google.com/file/d/1sPB8yJ2Oyrfjx1ek09h2r2tRZTG2ZLt8/preview" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
+                            <div class="text" ><a href="../assets/発表プログラム.pdf" target="_blank" style="color:black;"><i class="calendar alternate outline icon"></i>Time Table</a></div>
                         </div>
                     </div>
                     <div class="item nine wide column">
@@ -103,12 +103,13 @@ require_once('card.php');
             <!-- M1 スライドセクション -->
             <a id="M1" class="anchor"></a>
             <div class="M1 materials">
-                <div class="ui centered grid">
+                <div class="ui text container"><h3>M 1</h3></div>
+                <!-- <div class="ui centered grid">
                     <h3 class="six wide column" style="text-align: right;">M 1</h3>
                     <div class="six wide column" style="padding-left: 50px;">
                         <button class="ui inverted secondary large button" onclick="window.open('https://forms.gle/uDWLYMFK1sjGvLoeA','_blank')" data-tooltip="面白い！と思った研究を最大3つお選びください。この投票結果で、優秀発表賞が決まります。"><i class="archive icon"></i> 投票する（M1）</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="container">
                     <div class="ui cards centered" id="cards">
                         <!-- card example -->
@@ -196,12 +197,13 @@ require_once('card.php');
             <!-- M2 スライドセクション -->
             <a id="M2" class="anchor"></a>
             <div class="M2 materials">
-                <div class="ui centered grid">
+                <div class="ui horizontal divider"><h3 style="padding: 20px 40px;">M 2</h3></div>
+                <!-- <div class="ui centered grid">
                     <h3 class="six wide column" style="text-align: right;">M 2</h3>
                     <div class="six wide column" style="padding-left: 50px;">
                         <button class="ui inverted secondary large button" onclick="window.open('https://forms.gle/yFU1X6A6KBrRJ9nH7','_blank')" data-tooltip="面白い！と思った研究を最大3つお選びください。この投票結果で、優秀発表賞が決まります。"><i class="archive icon"></i> 投票する（M2）</a>
                     </div>
-                </div>
+                </div> -->
                 <div class="container">
                     <div class="ui cards centered">
                         
@@ -240,7 +242,14 @@ require_once('card.php');
                                         echo "<div class='ui comment icon button' data-tooltip='コメントする' id='card'.{$studentData->getSlideNumber()}>"
                                         ?>
                                         <i class="ui comment alternate icon"></i></div>
-                                        <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+
+                                        <!-- 動画リンク -->
+                                        <?php if(date('Y-m-d H:i') > ('2021-02-10 00:00')):?>
+                                            <a href=<?php echo $studentData -> getYoutubeLink() ?> target="_blank" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+                                        <?php else:?>
+                                            <a href="../assets/preparing.php" class="ui watching button right floated" style="font-size: 12px; padding:1em 0.8em;">
+                                        <?php endif; ?>
+                                        
                                         <i class="video icon"></i>発表動画を観る</a>
                                     </div>
                                 </div>
@@ -323,7 +332,10 @@ require_once('card.php');
                     </div>
                 <?php endif; ?>
             </div>
-
+            
+            <div class="ui centered container" style="margin: 40px;" id="voting-button">
+                <button class="ui inverted secondary huge button" onclick="window.open('https://forms.gle/uDWLYMFK1sjGvLoeA','_blank')" data-tooltip="面白い！と思った研究を最大3つお選びください。この投票結果で、優秀発表賞が決まります。"><i class="archive icon"></i> 投票する</a>
+            </div>
             </div> <!-- /content 終わり-->
 
             <div id="page_top"><a href="#"></a></div>
