@@ -9,7 +9,7 @@
             <div class="ui dropdown purple item">
                 <i class="inverted file alternate icon"></i>資料リンク
                 <div class="menu">
-                    <a href="http://www.mi.u-tokyo.ac.jp/consortium/" class="item" target="_blank">データサイエンス・ケースバンク</a>
+                    <a href="https://datasci.sk.tsukuba.ac.jp/" class="item" target="_blank">データサイエンス・ケースバンク</a>
                     <div class="item">
                         <i class="caret left icon"></i>
                         ポスターセッション
